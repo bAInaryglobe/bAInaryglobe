@@ -9,7 +9,7 @@ const testimonialData: Testimonial[] = [
     designation: "Founder @bAInaryglobe",
     content:
       "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a website, app, startup, bAInaryglobe has you covered",
-    image: "/images/testimonials/auth-01.png",
+    image: "/images/testimonials/auth-01a.png",
     star: 5,
   },
   {
@@ -18,7 +18,7 @@ const testimonialData: Testimonial[] = [
     designation: "Backend developer @bAInaryglobe",
     content:
       "We are utterly impressed with how far we've gone with the products",
-    image: "/images/testimonials/auth-02.png",
+    image: "/images/testimonials/auth-02a.png",
     star: 5,
   },
   {
@@ -27,7 +27,7 @@ const testimonialData: Testimonial[] = [
     designation: "UI designer @bAInaryglobe",
     content:
       "The design language is so unique and scalable it works effortlessly",
-    image: "/images/testimonials/auth-03.png",
+    image: "/images/testimonials/auth-03a.png",
     star: 5,
   },
 
@@ -38,7 +38,7 @@ const testimonialData: Testimonial[] = [
     designation: "Video Animator @bAInaryglobe",
     content:
       "The most important thing is that everything just works",
-    image: "/images/testimonials/auth-03.png",
+    image: "/images/testimonials/auth-03a.png",
     star: 5,
   },
 
