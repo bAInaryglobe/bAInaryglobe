@@ -9,7 +9,7 @@ const blogData: Blog[] = [
     image: "/images/blog/blog-01.jpg",
     author: {
       name: "Emmanuel Eyitayo",
-      image: "/images/blog/author-01.png",
+      image: "/images/blog/author-01a.png",
       designation: "Graphic Designer",
     },
     tags: ["creative"],
@@ -21,7 +21,7 @@ const blogData: Blog[] = [
     title: "9 simple ways to improve your design skills",
     paragraph:
       "Technology",
-    image: "/images/blog/blog-02.jpg",
+    image: "/images/blog/blog-02a.jpg",
     author: {
       name: "Emmanuel Eyitayo",
       image: "/images/blog/author-02.png",
@@ -35,7 +35,7 @@ const blogData: Blog[] = [
     title: "Tips to quickly improve your coding speed.",
     paragraph:
       "Technology",
-    image: "/images/blog/blog-03.jpg",
+    image: "/images/blog/blog-03a.jpg",
     author: {
       name: "Nathaniel Favour",
       image: "/images/blog/author-03.png",
@@ -50,7 +50,7 @@ const blogData: Blog[] = [
     title: " How to build a Million dollar company",
     paragraph:
       "Technology",
-    image: "/images/blog/blog-03.jpg",
+    image: "/images/blog/blog-03a.jpg",
     author: {
       name: "Ben Lucky",
       image: "/images/blog/author-03.png",
