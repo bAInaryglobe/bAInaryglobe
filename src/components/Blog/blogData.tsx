@@ -21,10 +21,10 @@ const blogData: Blog[] = [
     title: "9 simple ways to improve your design skills",
     paragraph:
       "Technology",
-    image: "/images/blog/blog-02a.jpg",
+    image: "/images/blog/blog-02.jpg",
     author: {
       name: "Emmanuel Eyitayo",
-      image: "/images/blog/author-02.png",
+      image: "/images/blog/author-02a.png",
       designation: "Content Writer",
     },
     tags: ["computer"],
@@ -38,7 +38,7 @@ const blogData: Blog[] = [
     image: "/images/blog/blog-03a.jpg",
     author: {
       name: "Nathaniel Favour",
-      image: "/images/blog/author-03.png",
+      image: "/images/blog/author-03a.png",
       designation: "Backend developer",
     },
     tags: ["design"],
@@ -50,10 +50,10 @@ const blogData: Blog[] = [
     title: " How to build a Million dollar company",
     paragraph:
       "Technology",
-    image: "/images/blog/blog-03a.jpg",
+    image: "/images/blog/blog-03.jpg",
     author: {
       name: "Ben Lucky",
-      image: "/images/blog/author-03.png",
+      image: "/images/blog/author-03a.png",
       designation: "Backend developer",
     },
     tags: ["design"],
