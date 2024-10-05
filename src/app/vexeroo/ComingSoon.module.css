@@ -1,0 +1,28 @@
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/background.jpg'); /* Add your background image here */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .main {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 10px;
+  }
+  
+  .title {
+    font-size: 4rem;
+    margin: 0;
+  }
+  
+  .description {
+    font-size: 1.5rem;
+    margin: 20px 0 0;
+  }

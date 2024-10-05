@@ -6,3 +6,4 @@ export type Testimonial = {
   image: string;
   star: number;
 };
+
