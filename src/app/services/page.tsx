@@ -91,7 +91,9 @@ const ServicesPage = () => {
         <h1>Bainaryglobe Services</h1>
         <div className={styles.servicesList}>
           {services.map((service, index) => (
-            <div key={index} className={styles.card}>
+
+
+            <div key={index} className={styles.card} style="width:80%">
               <Image
                 src={service.image}
                 alt={service.name}
@@ -108,6 +110,10 @@ const ServicesPage = () => {
                 <button className={styles.signUp}>Sign Up</button>
               </div>
             </div>
+
+
+
+
           ))}
         </div>
       </div>
