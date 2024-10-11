@@ -18,45 +18,70 @@ export const metadata: Metadata = {
 const services = [
     {
       image: '/service1.png',
-      name: 'Service One',
+      name: 'Vexeroo',
       description: 'Description of Service One',
     },
     {
       image: '/service2.png',
-      name: 'Service Two',
+      name: 'Vexeroo car',
       description: 'Description of Service Two',
     },
     {
         image: '/vxfit.png',
-        name: 'Home inclined finess app',
+        name: 'Vxfit',
         description: 'Vxfit is a fitness app designed for busy, office individuals'
     },
     {
         image: '',
-        name: '',
+        name: 'See Naija',
         description: ''
     },
     {
         image: '',
-        name: '',
+        name: 'VxReels',
         description: ''
     },
 
     {
         image: '',
-        name: '',
+        name: 'VxFuel',
         description: ''
     },
     {
         image: '',
-        name: '',
+        name: 'VxCars',
         description: ''
     },
     {
         image: '',
-        name: '',
+        name: 'VxAI',
         description: ''
-    }
+    },
+
+    {
+        image: '',
+        name: 'VxHome',
+        description: ''
+    },
+    
+    {
+        image: '',
+        name: 'VxFlight',
+        description: ''
+    },
+    
+    // {
+    //     image: '',
+    //     name: 'VxAI',
+    //     description: ''
+    // },
+    
+    // {
+    //     image: '',
+    //     name: 'VxAI',
+    //     description: ''
+    // },
+    
     // Add more services as needed
   ];
 
