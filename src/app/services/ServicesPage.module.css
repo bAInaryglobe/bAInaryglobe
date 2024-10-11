@@ -1,0 +1,68 @@
+.container {
+    padding: 20px;
+  }
+  
+  .servicesList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .card {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .image {
+    margin-right: 20px;
+  }
+  
+  .details {
+    flex-grow: 1;
+  }
+  
+  .name {
+    font-size: 1.5em;
+    margin: 0;
+  }
+  
+  .description {
+    font-size: 0.9em;
+    color: #666;
+  }
+  
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .learnMore, .signUp {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  .learnMore {
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .signUp {
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  @media (min-width: 600px) {
+    .buttons {
+      flex-direction: row;
+      gap: 20px;
+    }
+  }
