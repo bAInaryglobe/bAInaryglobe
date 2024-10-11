@@ -22,7 +22,7 @@ const services = [
       description: 'Description of Service One',
     },
     {
-      image: '/vexeroocar.png',
+      image: '/vxfit.png',
       name: 'Vexeroo car',
       description: 'Description of Service Two',
     },
@@ -32,40 +32,40 @@ const services = [
         description: 'Vxfit is a fitness app designed for busy, office individuals'
     },
     {
-        image: '/seenaija',
+        image: '/vxfit.png',
         name: 'See Naija',
         description: ' Tourism attractions right within the vexeroo app'
     },
     {
-        image: '/vxreels',
+        image: '/vxfit.png',
         name: 'VxReels',
         description: 'View reels, live sessions of product unveilings, and much more'
     },
 
     {
-        image: '/vxfuel',
+        image: '/vxfit.png',
         name: 'VxFuel',
         description: 'Order fuel from the comfort of your home, dont break a sweat'
     },
     {
-        image: '/vxcars',
+        image: '/vxfit.png',
         name: 'VxCars',
         description: 'Rent a car as easy as it gets, no problem!'
     },
     {
-        image: '/vxai',
+        image: '/vxfit.png',
         name: 'VxAI',
         description: 'Chat with a fully customizable assistant to help you with daily activities'
     },
 
     {
-        image: '/vxhome',
+        image: '/vxhome.png',
         name: 'VxHome',
         description: 'Vexeroo homes provides house rental, house sharing, and others without meddling agents'
     },
     
     {
-        image: '/vxflight',
+        image: '/vxflight.png',
         name: 'VxFlight',
         description: 'from your home, straight to the airport, no hassle involved we take care of all that.'
     },
