@@ -17,12 +17,12 @@ export const metadata: Metadata = {
 // Curated list of services offered by bainaryglobe
 const services = [
     {
-      image: '/service1.png',
+      image: '/vexeroo.png',
       name: 'Vexeroo',
       description: 'Description of Service One',
     },
     {
-      image: '/service2.png',
+      image: '/vexeroocar.png',
       name: 'Vexeroo car',
       description: 'Description of Service Two',
     },
@@ -32,23 +32,23 @@ const services = [
         description: 'Vxfit is a fitness app designed for busy, office individuals'
     },
     {
-        image: '',
+        image: 'seenaija',
         name: 'See Naija',
         description: ''
     },
     {
-        image: '',
+        image: 'vxreels',
         name: 'VxReels',
         description: ''
     },
 
     {
-        image: '',
+        image: 'vxfuel',
         name: 'VxFuel',
         description: ''
     },
     {
-        image: '',
+        image: 'vxcars',
         name: 'VxCars',
         description: ''
     },
