@@ -93,7 +93,7 @@ const ServicesPage = () => {
           {services.map((service, index) => (
 
 
-            <div key={index} className={styles.card} style="width:80%">
+            <div key={index} className={styles.card} >
               <Image
                 src={service.image}
                 alt={service.name}
