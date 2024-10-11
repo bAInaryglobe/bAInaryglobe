@@ -32,42 +32,42 @@ const services = [
         description: 'Vxfit is a fitness app designed for busy, office individuals'
     },
     {
-        image: 'seenaija',
+        image: '/seenaija',
         name: 'See Naija',
-        description: ''
+        description: ' Tourism attractions right within the vexeroo app'
     },
     {
-        image: 'vxreels',
+        image: '/vxreels',
         name: 'VxReels',
-        description: ''
+        description: 'View reels, live sessions of product unveilings, and much more'
     },
 
     {
-        image: 'vxfuel',
+        image: '/vxfuel',
         name: 'VxFuel',
-        description: ''
+        description: 'Order fuel from the comfort of your home, dont break a sweat'
     },
     {
-        image: 'vxcars',
+        image: '/vxcars',
         name: 'VxCars',
-        description: ''
+        description: 'Rent a car as easy as it gets, no problem!'
     },
     {
-        image: '',
+        image: '/vxai',
         name: 'VxAI',
-        description: ''
+        description: 'Chat with a fully customizable assistant to help you with daily activities'
     },
 
     {
-        image: '',
+        image: '/vxhome',
         name: 'VxHome',
-        description: ''
+        description: 'Vexeroo homes provides house rental, house sharing, and others without meddling agents'
     },
     
     {
-        image: '',
+        image: '/vxflight',
         name: 'VxFlight',
-        description: ''
+        description: 'from your home, straight to the airport, no hassle involved we take care of all that.'
     },
     
     // {
