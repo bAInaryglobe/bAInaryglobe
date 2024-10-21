@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="/"/>
+    <meta charset="utf-8"/>
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Roboto);
+      @import url(https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap);
+      html, body {
+        font-family: 'Roboto', sans-serif;
+        width: 100%;
+        min-height: 100vh;
+        padding: 0;
+        margin: 0;
+      }
+      h1 {
+        font-size: 4rem;
+        margin: unset;
+      }
+    </style>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Bainaryglobe</title>
+    <link href="manifest.json" rel="manifest"/>
+    <link href="styles.css" rel="stylesheet"/>
+    <link href="header.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script async src="flutter_bootstrap.js"></script>
+    <script async src="background.js"></script>
+    <!--$-->
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!--/-->
+    <script src="pages/home.client.dart.js" defer></script>
+    <style>
+      .counter {
+        display: flex;
+        align-items: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-top-style: solid;
+        border-bottom-style: solid;
+        border-top-color: #800080;
+        border-bottom-color: #800080;
+        border-top-width: 1px;
+        border-bottom-width: 1px;
+      }
+      .counter button {
+        font-size: 2rem;
+        width: 2em;
+        height: 2em;
+        border: unset;
+        cursor: pointer;
+        border-radius: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+      }
+      .counter button:hover {
+        background-color: #0001;
+      }
+      .counter span {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        box-sizing: border-box;
+        min-width: 2.5em;
+        color: #800080;
+        font-size: 4rem;
+        text-align: center;
+      }
+      ol {
+        max-width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex flex-col min-h-screen ">
+      <nav class="flex items-center justify-between p-4 w-5/6 mx-auto">
+        <div class="flex items-center space-x-2"><img class="h-8 w-auto" src="/images/logo1.png"/><div class="text-lg font-bold">bainaryglobe</div></div>
+        <div class="md:hidden">
+          <button class="text-gray-800 font-medium "><i class="fas fa-bars bg-black"></i></button>
+          <ul class="font-bold flex-col space-y-4 mt-2 hidden">
+            <li class="text-gray-800 font-medium">Home <i class="fas fa-chevron-down"></i></li>
+            <li class="text-gray-800 font-bold"><a href="#servicesn">Services</a></li>
+            <li class="text-gray-800 font-bold"><a href="#testimoniesn">Testimonies</a></li>
+            <li class="text-gray-800 font-bold"><a href="#missionn">Mission</a></li>
+          </ul>
+        </div>
+        <ul class="hidden md:flex space-x-8">
+          <li class="text-gray-800 font-medium">Home <i class="fas fa-chevron-down"></i></li>
+          <li class="text-gray-800 font-bold"><a href="#servicesn">Services</a></li>
+          <li class="text-gray-800 font-bold"><a href="#testimoniesn">Testimonies</a></li>
+          <li class="text-gray-800 font-bold"><a href="#missionn">Mission</a></li>
+        </ul>
+        <button class="bg-gradient-to-r from-black to-purple-600 text-white font-medium py-2 px-4 rounded-full">Explore Now</button>
+      </nav>
+      <div class="flex-grow">
+        <!--@pages/home-->
+        <div id="background-div" class="p-4 ">
+          <br/>
+          <div class="font-bold text-6xl" style="text-align: center; font-weight: bold">Turning challenges into innovative solutions</div>
+          <br/>
+          <div class="font-medium font-space-grotesk" style="text-align: center">
+            At Bainary Globe, we are dedicated to crafting innovative digital solutions that effectively tackle real-world challenges, empowering individuals and businesses to thrive in an ever-evolving landscape
+          </div>
+          <nav class="flex items-center justify-center p-4 ">
+            <button class="bg-gradient-to-r from-black to-purple-600 text-white font-medium py-2 px-4 rounded-full">Explore Now</button>
+          </nav>
+          <div class="justify-center flex items-center space-x-2 text-gray-500">
+            <span class="text-lg">Will You like to know more</span>
+            <span class="font-bold text-lg text-gray-700">Keep Scrolling</span>
+            <i class="fas fa-arrow-right text-lg text-gray-700"></i>
+          </div>
+          <div class="relative w-full">
+            <div class="relative h-full">
+              <div class="justify-center w-full h-auto bg-transparent">
+                <style>
+                            @keyframes spin-slow {
+                              from {
+                                transform: rotate(0deg);
+                              }
+                              to {
+                                transform: rotate(-360deg);
+                              }
+                            }
+                            .animate-spin-slow {
+                              animation: spin-slow 10s linear infinite;
+                            }
+                            .container {
+                              display: flex;
+                              justify-content: center;
+                              align-items: center;
+                              width: 100%;
+                              height: 100%;
+                              background-color: transparent;
+                            }
+                            .image-wrapper {
+                              position: relative;
+                              border-radius: 12px;
+                              overflow: hidden;
+                              background-color: transparent;
+                            }
+                            .image-wrapper img {
+                              width: 100%;
+                              height: auto;
+                              background-color: transparent;
+                            }
+                            
+                </style>
+                <div class="container bg-transparent">
+                  <div class="image-wrapper animate-spin-slow bg-transparent"><img alt="test" src="/images/o1.png"/></div>
+                </div>
+              </div>
+            </div>
+            <div class="absolute inset-x-0 bottom-0 flex flex-col items-center" style="height: 50%">
+              <div class="w-full">
+                <div class="w-full max-w-full p-4">
+                  <div class="relative rounded-xl shadow-2xl overflow-hidden"><img class="w-full h-auto" alt="Bainaryglobe" src="/images/flatimager.png"/></div>
+                </div>
+                <div>
+                  <div class="relative w-full rounded-lg overflow-hidden">
+                    <img class="w-full h-auto object-cover" src="/images/full.png"/>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                      <div class="text-center text-white font-bold p-4" style="max-width: 70%%; margin: 0 auto; padding: 0 15%; word-wrap: break-word; font-size: calc(1.5rem + 1vw)">Bridging the World with Binary Solutions for Everyday Life.</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex flex-col items-center">
+                  <style>
+                            @import url(&#39;https:&#47;&#47;fonts.googleapis.com&#47;css2?family=Inter:wght@400;700&amp;display=swap&#39;);
+                            body {
+                              font-family: &#39;Inter&#39;, sans-serif;
+                              background: linear-gradient(180deg, #E0E7FF 0%, #FFFFFF 100%);
+                            }
+                            
+                  </style>
+                  <body class="flex flex-col items-center justify-center min-h-screen p-4">
+                    <div class="text-center max-w-4xl px-4">
+                      <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-purple-900 leading-tight">
+                        Our smart app suite solves real-time challenges, fueling success and growth with Bainary Globe innovation.
+                      </h1>
+                      <div class="flex items-center justify-center mt-4">
+                        <span class="text-xl sm:text-2xl text-purple-900 mr-4">•</span>
+                        <a class="text-base sm:text-lg font-medium text-black flex items-center" href="#">Know More <i class="fas fa-arrow-right ml-2"></i></a>
+                      </div>
+                    </div>
+                    <div class="mt-16 p-4 sm:p-8 border-4 border-purple-500 rounded-lg max-w-4xl">
+                      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-purple-900 leading-tight">Bainary Globe fosters innovation, teamwork, ethics, and growth.</h2>
+                      <div class="flex items-center justify-center mt-8">
+                        <button class="bg-white text-black text-base sm:text-lg font-medium py-2 px-4 rounded-full shadow-md flex items-center">Scroll <i class="fas fa-arrow-down ml-2"></i></button>
+                      </div>
+                    </div>
+                  </body>
+                  <div class="w-full max-w-full p-4">
+                    <div class="relative rounded-xl shadow-2xl overflow-hidden"><img class="w-full h-auto" alt="Bainaryglobe" src="/images/n7.png"/></div>
+                  </div>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
+                    <div class="w-full max-w-full p-4">
+                      <div class="relative rounded-xl shadow-2xl overflow-hidden">
+                        <img class="w-full h-auto" alt="Image 1" src="images/n3.png"/>
+                        <div class="absolute top-4 left-4 bg-black bg-opacity-50 text-white p-2">The perfect platform to manage your digital solutions</div>
+                        <div class="absolute bottom-4 left-4 bg-green-500 bg-opacity-50 text-white p-2 flex items-center rounded-lg">➔ learn more</div>
+                      </div>
+                    </div>
+                    <div class="w-full max-w-full p-4">
+                      <div class="relative rounded-xl shadow-2xl overflow-hidden">
+                        <img class="w-full h-auto" alt="Image 2" src="images/n4.png"/>
+                        <div class="absolute top-4 left-4 bg-black bg-opacity-50 text-white p-2">We Develop</div>
+                        <div class="absolute bottom-4 left-4 bg-green-500 bg-opacity-50 text-white p-2 flex items-center rounded-lg">➔ learn more</div>
+                      </div>
+                    </div>
+                    <div class="w-full max-w-full p-4">
+                      <div class="relative rounded-xl shadow-2xl overflow-hidden">
+                        <img class="w-full h-auto" alt="Image 3" src="images/n5.png"/>
+                        <div class="absolute top-4 left-4 bg-black bg-opacity-50 text-white p-2">We innovate</div>
+                        <div class="absolute bottom-4 left-4 bg-green-500 bg-opacity-50 text-white p-2 flex items-center rounded-lg">➔ learn more</div>
+                      </div>
+                    </div>
+                    <div class="w-full max-w-full p-4">
+                      <div class="relative rounded-xl shadow-2xl overflow-hidden">
+                        <img class="w-full h-auto" alt="Image 4" src="images/n6.png"/>
+                        <div class="absolute top-4 left-4 bg-black bg-opacity-50 text-white p-2">Connecting Ideas Innovation</div>
+                        <div class="absolute bottom-4 left-4 bg-green-500 bg-opacity-50 text-white p-2 flex items-center rounded-lg">➔ learn more</div>
+                      </div>
+                    </div>
+                  </div>
+                  <br/>
+                  <div class="font-bold text-6xl" style="text-align: center; font-weight: bold" id="servicesn">Our services deliver innovative, real-time solutions for everyday challenges.</div>
+                  <br/>
+                  <div class="relative w-full h-screen">
+                    <img class="w-full h-full object-cover" src="/images/banners0.png"/>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center">
+                      <div class="text-center text-white font-bold text-4xl md:text-6xl">Settle down anywhere with the comfort of vx homes</div>
+                      <div class="absolute bottom-8">
+                        <button class="bg-gradient-to-r from-black to-purple-600 text-white font-medium py-2 px-4 rounded-full">Explore Now</button>
+                      </div>
+                    </div>
+                  </div>
+                  <br/>
+                  <br/>
+                  <div class="relative w-full h-screen">
+                    <img class="w-full h-full object-cover" src="/images/banners2.png"/>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center">
+                      <div class="text-center text-white font-bold text-4xl md:text-6xl">Travel the world with your choice vehicle</div>
+                      <div class="absolute bottom-8">
+                        <button class="bg-gradient-to-r from-black to-purple-600 text-white font-medium py-2 px-4 rounded-full">Explore Now</button>
+                      </div>
+                    </div>
+                  </div>
+                  <br/>
+                  <div class="relative w-full h-screen">
+                    <img class="w-full h-full object-cover" src="/images/banners3.png"/>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center">
+                      <div class="text-center text-white font-bold text-4xl md:text-6xl">Never run out of fuel again! we got you.</div>
+                      <div class="absolute bottom-8">
+                        <button class="bg-gradient-to-r from-black to-purple-600 text-white font-medium py-2 px-4 rounded-full">Explore Now</button>
+                      </div>
+                    </div>
+                  </div>
+                  <br/>
+                  <div class="relative w-full h-screen">
+                    <img class="w-full h-full object-cover" src="/images/banners4.png"/>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center">
+                      <div class="text-center text-white font-bold text-4xl md:text-6xl">Home cleaning? take some rest we got you covered</div>
+                      <div class="absolute bottom-8">
+                        <button class="bg-gradient-to-r from-black to-purple-600 text-white font-medium py-2 px-4 rounded-full">Explore Now</button>
+                      </div>
+                    </div>
+                  </div>
+                  <br/>
+                  <div class="relative w-full h-screen">
+                    <img class="w-full h-full object-cover" src="/images/banners5.png"/>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center">
+                      <div class="text-center text-white font-bold text-4xl md:text-6xl">Order anything from the comfort of your home</div>
+                      <div class="absolute bottom-8">
+                        <button class="bg-gradient-to-r from-black to-purple-600 text-white font-medium py-2 px-4 rounded-full">Explore Now</button>
+                      </div>
+                    </div>
+                  </div>
+                  <br/>
+                  <div class="relative w-full h-screen">
+                    <img class="w-full h-full object-cover" src="/images/banners6.png"/>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center">
+                      <div class="text-center text-white font-bold text-4xl md:text-6xl">Tired of going to buy utilities? pay for anything from vexeroo app</div>
+                      <div class="absolute bottom-8">
+                        <button class="bg-gradient-to-r from-black to-purple-600 text-white font-medium py-2 px-4 rounded-full">Explore Now</button>
+                      </div>
+                    </div>
+                  </div>
+                  <br/>
+                  <div class="relative w-full h-screen">
+                    <img class="w-full h-full object-cover" src="/images/banners7.png"/>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center">
+                      <div class="text-center text-white font-bold text-4xl md:text-6xl">Too busy to make it to the gym? rest assured, let us train you.</div>
+                      <div class="absolute bottom-8">
+                        <button class="bg-gradient-to-r from-black to-purple-600 text-white font-medium py-2 px-4 rounded-full">Explore Now</button>
+                      </div>
+                    </div>
+                  </div>
+                  <br/>
+                  <style>
+                            @import url(&#39;https:&#47;&#47;fonts.googleapis.com&#47;css2?family=Roboto:wght@400;700&amp;display=swap&#39;);
+                            body {
+                              font-family: &#39;Roboto&#39;, sans-serif;
+                            }
+                            .custom-shape {
+                              background: #E0D4FF;
+                              border-radius: 50%;
+                              padding: 2rem;
+                              position: relative;
+                            }
+                            .custom-shape img {
+                              border-radius: 10px;
+                              transform: rotate(-10deg);
+                            }
+                            .custom-shape::before {
+                              content: &#39;&#39;;
+                              position: absolute;
+                              top: 10px;
+                              left: 10px;
+                              width: 20px;
+                              height: 20px;
+                              background: #000;
+                              border-radius: 50%;
+                            }
+                            .custom-shape::after {
+                              content: &#39;&#39;;
+                              position: absolute;
+                              bottom: 10px;
+                              right: 10px;
+                              width: 20px;
+                              height: 20px;
+                              background: #000;
+                              border-radius: 50%;
+                            }
+                            
+                  </style>
+                  <body class="bg-white text-gray-800">
+                    <div class="container mx-auto p-6">
+                      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        <div class="flex flex-col md:flex-row items-center">
+                          <div class="custom-shape mb-6 md:mb-0 md:mr-6">
+                            <img alt="A black car parked on the road" width="300" height="200" src="https://storage.googleapis.com/a1aa/image/mToaMhHRe9TScKOPUWPfxtoJAZ7EaehrZlVL9GILEcNGZpQnA.jpg"/>
+                          </div>
+                          <div>
+                            <h2 class="text-2xl font-bold mb-4">VxCar</h2>
+                            <p class="mb-4">
+                              Our car rental app makes getting on the road easier than ever. With just a few taps, you can browse, book, and drive the perfect vehicle for your needs. Whether it’s for business or leisure, our app ensures a seamless rental experience, saving you time and effort. Enjoy the convenience of reliable, hassle-free car rentals at your fingertips, anytime, anywhere.
+                            </p>
+                            <button class="bg-purple-600 text-white py-2 px-4 rounded-full shadow-lg">View More</button>
+                          </div>
+                        </div>
+                        <div class="flex flex-col md:flex-row items-center">
+                          <div class="custom-shape mb-6 md:mb-0 md:mr-6">
+                            <img alt="A modern house with large windows" width="300" height="200" src="https://storage.googleapis.com/a1aa/image/u7j8GGwZluLvDJYlLAa3iEPohaPyAh4hNIXBWQxMoNlILF6E.jpg"/>
+                          </div>
+                          <div>
+                            <h2 class="text-2xl font-bold mb-4">VxHome</h2>
+                            <p class="mb-4">
+                              Our home rental app simplifies finding your ideal space. Whether you’re looking for a short-term stay or a long-term home, you can easily browse, book, and move in with just a few clicks. We take the hassle out of renting by offering a streamlined, user-friendly experience from start to finish. Discover the perfect home, whenever and wherever you need it, with total convenience.
+                            </p>
+                            <button class="bg-purple-600 text-white py-2 px-4 rounded-full shadow-lg">View More</button>
+                          </div>
+                        </div>
+                        <div class="flex flex-col md:flex-row items-center">
+                          <div class="custom-shape mb-6 md:mb-0 md:mr-6">
+                            <img alt="A person in fashionable clothing" width="300" height="200" src="https://storage.googleapis.com/a1aa/image/4PtQx1viCzqUPVSId0dfeaS29wtoy2Mjv8U6eleN6o9qyShOB.jpg"/>
+                          </div>
+                          <div>
+                            <h2 class="text-2xl font-bold mb-4">Fashion</h2>
+                            <p class="mb-4">
+                              At Bainary Globe, our voice is clear, confident, and focused on innovation and reliability. We communicate with simplicity and professionalism, prioritizing user-centric messaging that reflects our expertise and dedication.
+                            </p>
+                            <button class="bg-purple-600 text-white py-2 px-4 rounded-full shadow-lg">View More</button>
+                          </div>
+                        </div>
+                        <div class="flex flex-col md:flex-row items-center">
+                          <div class="custom-shape mb-6 md:mb-0 md:mr-6">
+                            <img alt="A person using a smartphone" width="300" height="200" src="https://storage.googleapis.com/a1aa/image/G5sWNucNGm62HJ42EeoBg9mU2azAJ3VzDwkywJDgFegksUoTA.jpg"/>
+                          </div>
+                          <div>
+                            <h2 class="text-2xl font-bold mb-4">Utilities</h2>
+                            <p class="mb-4">
+                              Our utilities app puts control at your fingertips, making it easy to manage and pay for essential services. From electricity to Data and Airtime, everything is streamlined for your convenience. Track usage, monitor bills, and ensure timely payments all in one place. Simplify your utility management with an app designed to make life easier.
+                            </p>
+                            <button class="bg-purple-600 text-white py-2 px-4 rounded-full shadow-lg">View More</button>
+                          </div>
+                        </div>
+                        <div class="flex flex-col md:flex-row items-center">
+                          <div class="custom-shape mb-6 md:mb-0 md:mr-6">
+                            <img alt="A person cleaning a house" width="300" height="200" src="https://storage.googleapis.com/a1aa/image/axjYZuvzPexoJCjYqYGXizq9NKx1OR4qef13CLPKClsRZpQnA.jpg"/>
+                          </div>
+                          <div>
+                            <h2 class="text-2xl font-bold mb-4">Home Services</h2>
+                            <p class="mb-4">
+                              Our home services app connects you with trusted professionals for all your household needs. Whether it’s cleaning, repairs, or maintenance, booking expert help is quick and easy. With just a few taps, you can schedule services that fit your time and budget. Simplify home care with reliable, hassle-free solutions right at your fingertips.
+                            </p>
+                            <button class="bg-purple-600 text-white py-2 px-4 rounded-full shadow-lg">View More</button>
+                          </div>
+                        </div>
+                        <div class="flex flex-col md:flex-row items-center">
+                          <div class="custom-shape mb-6 md:mb-0 md:mr-6">
+                            <img alt="A person working out in a gym" width="300" height="200" src="https://storage.googleapis.com/a1aa/image/QeMtmmHZtAV0Z6YoFJmSnIhZAJZCUafrfFB9i5e8ngMByShOB.jpg"/>
+                          </div>
+                          <div>
+                            <h2 class="text-2xl font-bold mb-4">Fitness</h2>
+                            <p class="mb-4">
+                              Our fitness app helps you achieve your goals with personalized workouts, tracking, and expert guidance. Whether you’re a beginner or a pro, access tailored fitness plans that fit your lifestyle. Track progress, set goals, and stay motivated with real-time updates and support. Take control of your fitness journey, anytime, anywhere.
+                            </p>
+                            <button class="bg-purple-600 text-white py-2 px-4 rounded-full shadow-lg">View More</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </body>
+                  <div class="w-full max-w-full p-4">
+                    <div class="relative rounded-xl shadow-2xl overflow-hidden"><img class="w-full h-auto" alt="bainaryglobe" src="/images/banner.png"/></div>
+                  </div>
+                  <style>
+                            @import url(&#39;https:&#47;&#47;fonts.googleapis.com&#47;css2?family=Roboto:wght@400;700&amp;display=swap&#39;);
+                            body {
+                              font-family: &#39;Roboto&#39;, sans-serif;
+                            }
+                            
+                  </style>
+                  <body class="bg-white text-gray-900">
+                    <div class="max-w-4xl mx-auto p-6">
+                      <div class="text-center">
+                        <h1 class="text-5xl font-bold text-purple-600" id="missionn">Our Mission</h1>
+                        <p class="mt-4 text-lg text-gray-700">
+                          Bainary Globe&#39;s mission is to harness technology to solve real-time problems with innovative, intuitive applications that enhance productivity and user experience across industries.
+                        </p>
+                      </div>
+                      <div class="mt-4 bg-gray-900 text-white p-8 rounded-lg">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                          <div>
+                            <p>
+                              Binary Globe&#39;s mission is to leverage technology to solve real-time problems with innovative, intuitive applications that boost productivity and enrich user experiences. Its vision is to lead globally in developing transformative tech solutions that drive positive change and create societal value.
+                            </p>
+                            <a class="mt-4 inline-block text-purple-400 hover:text-purple-600" href="#">Mission <i class="fas fa-arrow-right"></i></a>
+                          </div>
+                          <div>
+                            <p>
+                              Binary Globe&#39;s voice is clear, confident, and forward-thinking, emphasizing clarity, simplicity, and innovation. It maintains a user-centric yet professional tone that reflects the company&#39;s expertise and commitment to its audience.
+                            </p>
+                            <a class="mt-4 inline-block text-purple-400 hover:text-purple-600" href="#">Brand Voice <i class="fas fa-arrow-right"></i></a>
+                          </div>
+                          <div>
+                            <p>
+                              Binary Globe is committed to driving industry advancement with innovative solutions that prioritize reliability, user-centricity, and trust. By fostering collaboration, excellence, sustainability, and community engagement, it aims to create meaningful impacts and continuous improvement in technology.
+                            </p>
+                            <a class="mt-4 inline-block text-purple-400 hover:text-purple-600" href="#">Brand Value <i class="fas fa-arrow-right"></i></a>
+                          </div>
+                        </div>
+                      </div>
+                      <br/>
+                      <br/>
+                      <br/>
+                      <div class="mt-4 text-center" id="testimoniesn"><h2 class="text-4xl font-bold text-purple-600">What they say about us</h2></div>
+                    </div>
+                  </body>
+                  <div class="container mx-auto p-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                      <div class="bg-purple-500 rounded-lg shadow-lg p-6 max-w-sm text-center relative">
+                        <div class="absolute top-4 right-4"><i class="fab fa-linkedin-in text-black"></i></div>
+                        <div class="flex justify-center mb-4">
+                          <div class="relative">
+                            <div class="w-16 h-16 bg-purple-200 rounded-full flex items-center justify-center">
+                              <img class="rounded-full" alt="Profile picture of John griffin" width="64" height="64" src="https://storage.googleapis.com/a1aa/image/e3zzv79Vr11VcC3KKDof5GtbVpa1ZLzjJL4J1JQiX4MSflNnA.jpg"/>
+                            </div>
+                          </div>
+                        </div>
+                        <h2 class="text-lg font-semibold">John griffin</h2>
+                        <p class="text-gray-600">Developer</p>
+                        <hr class="my-4"/>
+                        <p class="text-gray-700">
+                          Yeah, their services are top-notch. In less than 5 years I think this company might challenge silicon valley, who knows
+                        </p>
+                      </div>
+                      <div class="bg-purple-500 rounded-lg shadow-lg p-6 max-w-sm text-center relative">
+                        <div class="absolute top-4 right-4"><i class="fab fa-linkedin-in text-black"></i></div>
+                        <div class="flex justify-center mb-4">
+                          <div class="relative">
+                            <div class="w-16 h-16 bg-purple-200 rounded-full flex items-center justify-center">
+                              <img class="rounded-full" alt="Profile picture of Mary Ledger" width="64" height="64" src="https://storage.googleapis.com/a1aa/image/e3zzv79Vr11VcC3KKDof5GtbVpa1ZLzjJL4J1JQiX4MSflNnA.jpg"/>
+                            </div>
+                          </div>
+                        </div>
+                        <h2 class="text-lg font-semibold">Mary Ledger</h2>
+                        <p class="text-gray-600">Designer</p>
+                        <hr class="my-4"/>
+                        <p class="text-gray-700">Worked with Bainaryglobe as an intern; they definitely pack a punch for an African startup</p>
+                      </div>
+                      <div class="bg-purple-500 rounded-lg shadow-lg p-6 max-w-sm text-center relative">
+                        <div class="absolute top-4 right-4"><i class="fab fa-linkedin-in text-black"></i></div>
+                        <div class="flex justify-center mb-4">
+                          <div class="relative">
+                            <div class="w-16 h-16 bg-purple-200 rounded-full flex items-center justify-center">
+                              <img class="rounded-full" alt="Profile picture of Hope Anyansi" width="64" height="64" src="https://storage.googleapis.com/a1aa/image/e3zzv79Vr11VcC3KKDof5GtbVpa1ZLzjJL4J1JQiX4MSflNnA.jpg"/>
+                            </div>
+                          </div>
+                        </div>
+                        <h2 class="text-lg font-semibold">Hope Anyansi</h2>
+                        <p class="text-gray-600">Motion Graphics</p>
+                        <hr class="my-4"/>
+                        <p class="text-gray-700">In my 5+ years of work, I rarely see people as organized as this team</p>
+                      </div>
+                      <div class="bg-purple-500 rounded-lg shadow-lg p-6 max-w-sm text-center relative">
+                        <div class="absolute top-4 right-4"><i class="fab fa-linkedin-in text-black"></i></div>
+                        <div class="flex justify-center mb-4">
+                          <div class="relative">
+                            <div class="w-16 h-16 bg-purple-200 rounded-full flex items-center justify-center">
+                              <img class="rounded-full" alt="Profile picture of Solomon vice" width="64" height="64" src="https://storage.googleapis.com/a1aa/image/e3zzv79Vr11VcC3KKDof5GtbVpa1ZLzjJL4J1JQiX4MSflNnA.jpg"/>
+                            </div>
+                          </div>
+                        </div>
+                        <h2 class="text-lg font-semibold">Solomon vice</h2>
+                        <p class="text-gray-600">Backend Engineer</p>
+                        <hr class="my-4"/>
+                        <p class="text-gray-700">What more can I say? this is a company doing something revolutionary</p>
+                      </div>
+                      <div class="bg-purple-500 rounded-lg shadow-lg p-6 max-w-sm text-center relative">
+                        <div class="absolute top-4 right-4"><i class="fab fa-linkedin-in text-black"></i></div>
+                        <div class="flex justify-center mb-4">
+                          <div class="relative">
+                            <div class="w-16 h-16 bg-purple-200 rounded-full flex items-center justify-center">
+                              <img class="rounded-full" alt="Profile picture of Anita quicksilver" width="64" height="64" src="https://storage.googleapis.com/a1aa/image/e3zzv79Vr11VcC3KKDof5GtbVpa1ZLzjJL4J1JQiX4MSflNnA.jpg"/>
+                            </div>
+                          </div>
+                        </div>
+                        <h2 class="text-lg font-semibold">Anita quicksilver</h2>
+                        <p class="text-gray-600">Devops Engineer</p>
+                        <hr class="my-4"/>
+                        <p class="text-gray-700">bainaryglobe is like google of Africa</p>
+                      </div>
+                      <div class="bg-purple-500 rounded-lg shadow-lg p-6 max-w-sm text-center relative">
+                        <div class="absolute top-4 right-4"><i class="fab fa-linkedin-in text-black"></i></div>
+                        <div class="flex justify-center mb-4">
+                          <div class="relative">
+                            <div class="w-16 h-16 bg-purple-200 rounded-full flex items-center justify-center">
+                              <img class="rounded-full" alt="Profile picture of Churchill earnest" width="64" height="64" src="https://storage.googleapis.com/a1aa/image/e3zzv79Vr11VcC3KKDof5GtbVpa1ZLzjJL4J1JQiX4MSflNnA.jpg"/>
+                            </div>
+                          </div>
+                        </div>
+                        <h2 class="text-lg font-semibold">Churchill earnest</h2>
+                        <p class="text-gray-600">Frontend Engineer</p>
+                        <hr class="my-4"/>
+                        <p class="text-gray-700">Was tryna bootstrap my startup and I would have to say, services here are top notch</p>
+                      </div>
+                    </div>
+                  </div>
+                  <footer class="bg-black text-white py-12 w-full">
+                    <div class="container mx-auto flex flex-col md:flex-row justify-between items-start">
+                      <div class="flex flex-col items-start mb-8 md:mb-0">
+                        <div class="flex items-center mb-4">
+                          <img class="mr-2" alt="Company logo" width="50" height="50" src="/images/logo1.png"/>
+                          <span class="text-xl font-semibold">Bainary Globe</span>
+                        </div>
+                        <div class="mb-2"><span class="text-lg">+234 (915) 567-15-559</span></div>
+                        <div class="mb-4"><span class="text-lg">Official-support@bainaryglobe.com</span></div>
+                        <div class="flex space-x-4">
+                          <a class="text-white" href="#"><i class="fab fa-linkedin-in"></i></a>
+                          <a class="text-white" href="#"><i class="fab fa-facebook-f"></i></a>
+                          <a class="text-white" href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                      </div>
+                      <div class="flex flex-col items-start mb-8 md:mb-0">
+                        <span class="text-lg font-semibold mb-4">Quick Links</span>
+                        <a class="mb-2" href="#">Home</a>
+                        <a class="mb-2" href="#">Products</a>
+                        <a class="mb-2" href="#">About Us</a>
+                        <a class="mb-2" href="#">Mission</a>
+                      </div>
+                      <div class="flex flex-col items-start">
+                        <span class="text-lg font-semibold mb-4">Subscribe</span>
+                        <div class="flex">
+                          <input class="p-2 rounded-l-md text-black" placeholder="Get product updates" type="text"/>
+                          <button class="bg-purple-600 text-white p-2 rounded-r-md"><i class="fas fa-arrow-right"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="border-t border-gray-700 mt-8 pt-4 text-center"><span>© 2024 Bainaryglobe. All rights reserved</span></div>
+                  </footer>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--/@pages/home-->
+      </div>
+      <html>
+        <div class="fixed bottom-4 right-4 p-4 bg-purple-600 text-white rounded-lg shadow-lg cursor-pointer hover:bg-purple-800 transition w-16 h-16 flex items-center justify-center" id="topper" onclick="scrollToTop()"><i class="fas fa-arrow-up text-2xl"></i><img src="/images/logo1.png"/></div>
+        <script src="/scripts/topper.js"></script>
+      </html>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="/"/>
+    <meta charset="utf-8"/>
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Roboto);
+      @import url(https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap);
+      html, body {
+        font-family: 'Roboto', sans-serif;
+        width: 100%;
+        min-height: 100vh;
+        padding: 0;
+        margin: 0;
+      }
+      h1 {
+        font-size: 4rem;
+        margin: unset;
+      }
+    </style>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Bainaryglobe</title>
+    <link href="manifest.json" rel="manifest"/>
+    <link href="styles.css" rel="stylesheet"/>
+    <link href="header.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script async src="flutter_bootstrap.js"></script>
+    <script async src="background.js"></script>
+    <!--$-->
+    <title>About</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!--/-->
+    <script src="pages/about.client.dart.js" defer></script>
+    <style>
+      .counter {
+        display: flex;
+        align-items: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-top-style: solid;
+        border-bottom-style: solid;
+        border-top-color: #800080;
+        border-bottom-color: #800080;
+        border-top-width: 1px;
+        border-bottom-width: 1px;
+      }
+      .counter button {
+        font-size: 2rem;
+        width: 2em;
+        height: 2em;
+        border: unset;
+        cursor: pointer;
+        border-radius: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+      }
+      .counter button:hover {
+        background-color: #0001;
+      }
+      .counter span {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        box-sizing: border-box;
+        min-width: 2.5em;
+        color: #800080;
+        font-size: 4rem;
+        text-align: center;
+      }
+      ol {
+        max-width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex flex-col min-h-screen ">
+      <nav class="flex items-center justify-between p-4 w-5/6 mx-auto">
+        <div class="flex items-center space-x-2"><img class="h-8 w-auto" src="/images/logo1.png"/><div class="text-lg font-bold">bainaryglobe</div></div>
+        <div class="md:hidden">
+          <button class="text-gray-800 font-medium "><i class="fas fa-bars bg-black"></i></button>
+          <ul class="font-bold flex-col space-y-4 mt-2 hidden">
+            <li class="text-gray-800 font-medium">Home <i class="fas fa-chevron-down"></i></li>
+            <li class="text-gray-800 font-bold"><a href="#servicesn">Services</a></li>
+            <li class="text-gray-800 font-bold"><a href="#testimoniesn">Testimonies</a></li>
+            <li class="text-gray-800 font-bold"><a href="#missionn">Mission</a></li>
+          </ul>
+        </div>
+        <ul class="hidden md:flex space-x-8">
+          <li class="text-gray-800 font-medium">Home <i class="fas fa-chevron-down"></i></li>
+          <li class="text-gray-800 font-bold"><a href="#servicesn">Services</a></li>
+          <li class="text-gray-800 font-bold"><a href="#testimoniesn">Testimonies</a></li>
+          <li class="text-gray-800 font-bold"><a href="#missionn">Mission</a></li>
+        </ul>
+        <button class="bg-gradient-to-r from-black to-purple-600 text-white font-medium py-2 px-4 rounded-full">Explore Now</button>
+      </nav>
+      <div class="flex-grow">
+        <!--@pages/about-->
+        <section>
+          <ol>
+            <li>
+              <h3>📖 Documentation</h3>
+              Jaspr&#39;s 
+              <a href="https://docs.page/schultek/jaspr">official documentation</a>
+               provides you with all information you need to get started.
+            </li>
+            <li>
+              <h3>💬 Community</h3>
+              Got stuck? Ask your question on the official 
+              <a href="https://docs.page/schultek/jaspr">Discord server</a>
+               for the Jaspr community.
+            </li>
+            <li>
+              <h3>📦 Ecosystem</h3>
+              Get official packages and integrations for your project like jaspr_router, jaspr_tailwind or jaspr_riverpod. Find packages built for Jaspr on pub.dev using the 
+              <a href="https://pub.dev/packages?q=topic%3Ajaspr">#jaspr</a>
+               topic, or publish your own.
+            </li>
+            <li>
+              <h3>💙 Support Jaspr</h3>
+              If you like Jaspr, consider starring us on 
+              <a href="https://github.com/schultek/jaspr">Github</a>
+               and tell your friends.
+            </li>
+          </ol>
+        </section>
+        <!--/@pages/about-->
+      </div>
+      <html>
+        <div class="fixed bottom-4 right-4 p-4 bg-purple-600 text-white rounded-lg shadow-lg cursor-pointer hover:bg-purple-800 transition w-16 h-16 flex items-center justify-center" id="topper" onclick="scrollToTop()"><i class="fas fa-arrow-up text-2xl"></i><img src="/images/logo1.png"/></div>
+        <script src="/scripts/topper.js"></script>
+      </html>
+    </div>
+  </body>
+</html>

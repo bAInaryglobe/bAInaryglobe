@@ -1,0 +1,40 @@
+/* styles.css */
+.hamburger-icon div {
+    transition: all 0.3s ease;
+  }
+  
+  .absolute {
+    position: absolute;
+  }
+  
+  .top-16 {
+    top: 4rem;
+  }
+  
+  .left-0 {
+    left: 0;
+  }
+  
+  .w-full {
+    width: 100%;
+  }
+  
+  .bg-opacity-90 {
+    background-opacity: 0.9;
+  }
+  
+  .p-4 {
+    padding: 1rem;
+  }
+  
+  .transition-opacity {
+    transition: opacity 0.3s ease;
+  }
+  
+  .duration-300 {
+    transition-duration: 0.3s;
+  }
+  
+  .pointer-events-none {
+    pointer-events: none;
+  }
