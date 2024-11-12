@@ -29,7 +29,7 @@ const Footer = () => {
                   />
                 </Link>
                 <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
-                Explore a vast selection of digital solutions, including apps, websites, and platforms. With Bainary Globe, you will find the pertect tool to meet your needs, tailored to your preterences.
+                Explore a vast selection of digital solutions, including apps, websites, and platforms. With Bainary Globe, you will find the pertect tool to meet your needs, tailored to your preferences.
                 </p>
                 <div className="flex items-center">
                   <a
