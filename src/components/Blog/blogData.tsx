@@ -5,7 +5,7 @@ const blogData: Blog[] = [
     id: 1,
     title: "bAInaryglobe's UI design methodology",
     paragraph:
-      "Technology has gone beyond the era when we had to design in an unorganized manner, and bAInaryglobe's design methodology is way ahead of the modern status quo.",
+      "Technology has moved beyond the era of unorganized design, and bAInaryglobe's design methodology is far ahead of the modern status quo.",
     image: "/images/blog/blog-01.jpg",
     author: {
       name: "Emmanuel Eyitayo",
