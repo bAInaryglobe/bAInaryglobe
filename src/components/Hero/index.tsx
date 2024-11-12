@@ -22,7 +22,7 @@ const Hero = () => {
                     href="/contact"
                     className="rounded-md bg-green-500 px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
                   >
-                    🔥 Get Started with us
+                    🔥 Contact Us
 
                   </Link>
                   <Link

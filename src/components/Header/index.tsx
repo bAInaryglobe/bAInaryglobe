@@ -175,7 +175,7 @@ const Header = () => {
                   href="/signup"
                   className="ease-in-up shadow-btn hover:shadow-btn-hover hidden rounded-md bg-green-500 px-8 py-3 text-base font-medium text-white transition duration-300 hover:bg-opacity-90 md:block md:px-9 lg:px-6 xl:px-9"
                 >
-Contact us
+🔥 Get started
 
                 </Link>
                 <div>
