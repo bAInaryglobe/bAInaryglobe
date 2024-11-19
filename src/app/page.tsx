@@ -11,6 +11,7 @@ import Testimonials from "@/components/Testimonials";
 import Video from "@/components/Video";
 import { Metadata } from "next";
 
+
 export const metadata: Metadata = {
   title: "bAInaryglobe",
   description: "This is Home for bAInaryglobe website",
