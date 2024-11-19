@@ -21,17 +21,17 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <ScrollUp />
-      <Hero />
-      <Features />
-      <Video />
-      <Brands />
-      <AboutSectionOne />
-      <AboutSectionTwo />
-      <Testimonials />
-      <Pricing />
-      <Blog />
-      <Contact />
+      <ScrollUp key="scroll-up" />
+      <Hero key="hero" />
+      <Features key="features" />
+      <Video key="video" />
+      <Brands key="brands" />
+      <AboutSectionOne key="about-section-one" />
+      <AboutSectionTwo key="about-section-two" />
+      <Testimonials key="testimonials" />
+      <Pricing key="pricing" />
+      <Blog key="blog" />
+      <Contact key="contact" />
     </>
   );
 }
