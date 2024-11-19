@@ -9,30 +9,30 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "aws-amplify": "^6.4.0",
-    "eslint": "^8.56.0",
-    "eslint-config-next": "^14.1.0",
-    "next": "^14.2.4",
+    "aws-amplify": "^6.8.2",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^14.2.18",
+    "next": "^14.2.18",
     "next-themes": "^0.2.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-modal-video": "^2.0.1"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-modal-video": "^2.0.2"
   },
   "devDependencies": {
-    "@aws-amplify/backend": "^1.0.4",
-    "@aws-amplify/backend-cli": "^1.1.0",
-    "@types/node": "^20.8.9",
-    "@types/react": "^18.2.33",
-    "autoprefixer": "^10.4.17",
-    "aws-cdk": "^2.148.1",
-    "aws-cdk-lib": "^2.148.1",
-    "constructs": "^10.3.0",
-    "esbuild": "^0.23.0",
-    "postcss": "^8.4.35",
-    "prettier": "^3.2.5",
-    "prettier-plugin-tailwindcss": "^0.5.11",
-    "tailwindcss": "^3.4.1",
-    "tsx": "^4.16.2",
-    "typescript": "^5.5.3"
+    "@aws-amplify/backend": "^1.7.0",
+    "@aws-amplify/backend-cli": "^1.4.2",
+    "@types/node": "^20.17.6",
+    "@types/react": "^18.3.12",
+    "autoprefixer": "^10.4.20",
+    "aws-cdk": "^2.167.1",
+    "aws-cdk-lib": "^2.167.1",
+    "constructs": "^10.4.2",
+    "esbuild": "^0.23.1",
+    "postcss": "^8.4.49",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.5.14",
+    "tailwindcss": "^3.4.15",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
   }
 }
