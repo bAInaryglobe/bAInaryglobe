@@ -88,19 +88,33 @@ const services = [
 const ServicesPage = () => {
     return (
       <div className={styles.container}>
-        <h1>Bainaryglobe Services</h1>
+        <h1 style={{
+          fontSize: '2.5rem',
+          textAlign: 'center',
+          marginBottom: '40px',
+          background: 'linear-gradient(90deg, #4A6CF7, #0070f3)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          animation: 'fadeIn 0.5s ease'
+        }}>
+          Bainaryglobe Services
+        </h1>
         <div className={styles.servicesList}>
           {services.map((service, index) => (
-
-
-            <div key={index} className={styles.card} >
-              <Image
-                src={service.image}
-                alt={service.name}
-                width={80}
-                height={80}
-                className={styles.image}
-              />
+            <div 
+              key={index} 
+              className={styles.card}
+              style={{ '--animation-order': index } as any}
+            >
+              <div className={styles.imageWrapper}>
+                <Image
+                  src={service.image}
+                  alt={service.name}
+                  width={80}
+                  height={80}
+                  className={styles.image}
+                />
+              </div>
               <div className={styles.details}>
                 <h2 className={styles.name}>{service.name}</h2>
                 <p className={styles.description}>{service.description}</p>
@@ -110,10 +124,6 @@ const ServicesPage = () => {
                 <button className={styles.signUp}>Sign Up</button>
               </div>
             </div>
-
-
-
-
           ))}
         </div>
       </div>
