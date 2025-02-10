@@ -3,7 +3,15 @@ import { Box, Card, CardContent, Typography, Button, Container, Grid, useTheme }
 import { motion } from 'framer-motion';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
-const PricingBox = ({ price, popular }: { price: any; popular?: boolean }) => {
+interface PricingProps {
+  packageName: string;
+  price: string;
+  duration: string;
+  subtitle: string;
+  children?: React.ReactNode;
+}
+
+const PricingBox = ({ packageName, price, duration, subtitle, children, popular }: PricingProps & { popular?: boolean }) => {
   const theme = useTheme();
 
   return (
@@ -74,7 +82,7 @@ const PricingBox = ({ price, popular }: { price: any; popular?: boolean }) => {
               color: theme.palette.text.primary,
             }}
           >
-            {price.package}
+            {packageName}
           </Typography>
 
           <Box sx={{ mb: 4 }}>
@@ -87,7 +95,7 @@ const PricingBox = ({ price, popular }: { price: any; popular?: boolean }) => {
                 display: 'inline',
               }}
             >
-              ${price.price}
+              ${price}
             </Typography>
             <Typography
               variant="subtitle1"
@@ -97,26 +105,22 @@ const PricingBox = ({ price, popular }: { price: any; popular?: boolean }) => {
                 ml: 1,
               }}
             >
-              /month
+              /{duration}
             </Typography>
           </Box>
 
+          <Typography
+            variant="subtitle1"
+            sx={{
+              color: theme.palette.text.secondary,
+              mb: 4,
+            }}
+          >
+            {subtitle}
+          </Typography>
+
           <Box sx={{ mb: 4 }}>
-            {price.features.map((feature: string, index: number) => (
-              <Box
-                key={index}
-                sx={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  mb: 2,
-                }}
-              >
-                <CheckCircleIcon sx={{ color: theme.palette.primary.main, mr: 1 }} />
-                <Typography variant="body1" color="text.primary">
-                  {feature}
-                </Typography>
-              </Box>
-            ))}
+            {children}
           </Box>
 
           <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
