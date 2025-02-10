@@ -1,13 +1,15 @@
 "use client";
 
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import ScrollToTop from "@/components/ScrollToTop";
+import { AppBar, Box, Container, IconButton, Toolbar, Typography, Paper } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
 import { Inter } from "next/font/google";
 import "node_modules/react-modal-video/css/modal-video.css";
 import "../styles/index.css";
 import { Providers, ThemeContext } from "./providers";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,40 +18,84 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const { theme } = useContext(ThemeContext);
-
-  useEffect(() => {
-    document.body.className = theme === "light" ? "bg-white" : "bg-gray-900";
-  }, [theme]);
-
   return (
     <html suppressHydrationWarning lang="en">
       <head />
-      <body className="min-h-screen">
+      <body className={inter.className}>
         <Providers>
-          <header className="bg-white dark:bg-gray-900 shadow py-4">
-            <div className="container mx-auto flex justify-between items-center">
-              <h1 className="text-xl font-bold">bAInaryglobe</h1>
-              <ThemeToggle />
-            </div>
-          </header>
-          <main>{children}</main>
-          <footer className="bg-gray-100 dark:bg-gray-800 py-6 mt-12">
-            <div className="container mx-auto text-center text-sm text-gray-600">
-              © {new Date().getFullYear()} bAInaryglobe. All rights reserved.
-            </div>
-          </footer>
+          <MainContent>{children}</MainContent>
         </Providers>
       </body>
     </html>
   );
 }
 
-function ThemeToggle() {
-  const { theme, toggleTheme } = useContext(ThemeContext);
+function MainContent({ children }: { children: React.ReactNode }) {
+  const theme = useTheme();
+  const { toggleTheme } = useContext(ThemeContext);
+  
   return (
-    <button onClick={toggleTheme} className="p-2 border rounded">
-      {theme === "light" ? "Dark Mode" : "Light Mode"}
-    </button>
+    <Box sx={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+      <AppBar position="sticky" elevation={0} sx={{ 
+        backgroundColor: theme.palette.background.default,
+        borderBottom: `1px solid ${theme.palette.divider}`,
+      }}>
+        <Container maxWidth="lg">
+          <Toolbar disableGutters>
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+            >
+              <Typography
+                variant="h6"
+                sx={{
+                  color: theme.palette.text.primary,
+                  fontWeight: 700,
+                }}
+              >
+                bAInaryglobe
+              </Typography>
+            </motion.div>
+            <Box sx={{ flexGrow: 1 }} />
+            <IconButton onClick={toggleTheme} color="inherit" sx={{
+              backgroundColor: theme.palette.action.hover,
+              borderRadius: 2,
+              '&:hover': {
+                backgroundColor: theme.palette.action.selected,
+              }
+            }}>
+              {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
+            </IconButton>
+          </Toolbar>
+        </Container>
+      </AppBar>
+
+      <Box component="main" sx={{ flexGrow: 1 }}>
+        <AnimatePresence mode="wait">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.5 }}
+          >
+            {children}
+          </motion.div>
+        </AnimatePresence>
+      </Box>
+
+      <Paper component="footer" elevation={0} sx={{
+        mt: 'auto',
+        py: 3,
+        backgroundColor: theme.palette.background.paper,
+        borderTop: `1px solid ${theme.palette.divider}`,
+      }}>
+        <Container maxWidth="lg">
+          <Typography variant="body2" color="text.secondary" align="center">
+            © {new Date().getFullYear()} bAInaryglobe. All rights reserved.
+          </Typography>
+        </Container>
+      </Paper>
+    </Box>
   );
 }
