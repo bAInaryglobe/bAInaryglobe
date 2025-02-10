@@ -15,10 +15,12 @@ export default function AboutPage() {
     <>
       <Breadcrumb
         pageName="About Page"
-        description="bAInary Globe: Innovating with a user-centric approach."
+        description="Learn about bAInaryglobe's mission and values"
       />
-      <AboutSectionOne />
-      <AboutSectionTwo />
+      <section className="container mx-auto py-12 space-y-12">
+        <AboutSectionOne />
+        <AboutSectionTwo />
+      </section>
     </>
   );
 }

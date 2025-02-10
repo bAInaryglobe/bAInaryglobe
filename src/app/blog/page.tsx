@@ -1,3 +1,4 @@
+"use client";
 import SingleBlog from "@/components/Blog/SingleBlog";
 import blogData from "@/components/Blog/blogData";
 import Breadcrumb from "@/components/Common/Breadcrumb";
@@ -16,12 +17,12 @@ export default function Blog() {
     <>
       <Breadcrumb
         pageName="Blog Page"
-        description="Get the latest information and updates from bAInaryglobe blog"
+        description="Latest insights and updates from bAInaryglobe"
       />
 
       <section className="pb-[120px] pt-[120px]">
-        <Suspense fallback={<p>Loading blog...</p>}>
-          <div className="container">
+        <Suspense fallback={<p className="text-center">Loading blog posts...</p>}>
+          <div className="container mx-auto">
             <div className="-mx-4 flex flex-wrap justify-center">
               {blogData.map((blog) => (
                 <div

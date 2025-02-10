@@ -1,3 +1,4 @@
+"use client";
 import SharePost from "@/components/Blog/SharePost";
 import TagButton from "@/components/Blog/TagButton";
 import Image from "next/image";
@@ -15,7 +16,7 @@ export default function BlogDetailsPage() {
     <>
       <section className="pb-[120px] pt-[150px]">
         {/* Fetch single post data from a robust source, replace placeholders */}
-        <div className="container">
+        <div className="container mx-auto">
           <div className="-mx-4 flex flex-wrap justify-center">
             <div className="w-full px-4 lg:w-8/12">
               <div>
@@ -336,25 +337,17 @@ EASE OF USE
                  TESTINGS
 
                   </p>
-                  <div className="items-center justify-between sm:flex">
-                    <div className="mb-5">
-                      <h4 className="mb-3 text-sm font-medium text-body-color">
-                        Popular Tags :
-                      </h4>
-                      <div className="flex items-center">
-                        <TagButton text="Design" />
-                        <TagButton text="Development" />
-                        <TagButton text="Info" />
-                      </div>
+                  <div className="mt-8">
+                    <h4 className="mb-3 text-sm font-medium">Popular Tags :</h4>
+                    <div className="flex items-center gap-2">
+                      <TagButton text="Design" />
+                      <TagButton text="Development" />
+                      <TagButton text="Info" />
                     </div>
-                    <div className="mb-5">
-                      <h5 className="mb-3 text-sm font-medium text-body-color sm:text-right">
-                        Share this post :
-                      </h5>
-                      <div className="flex items-center sm:justify-end">
-                        <SharePost />
-                      </div>
-                    </div>
+                  </div>
+                  <div className="mt-8">
+                    <h5 className="mb-3 text-sm font-medium">Share this post :</h5>
+                    <SharePost />
                   </div>
                 </div>
               </div>

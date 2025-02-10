@@ -6,7 +6,8 @@ import ScrollToTop from "@/components/ScrollToTop";
 import { Inter } from "next/font/google";
 import "node_modules/react-modal-video/css/modal-video.css";
 import "../styles/index.css";
-import { Providers } from "./providers";
+import { Providers, ThemeContext } from "./providers";
+import { useContext } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,12 +21,29 @@ export default function RootLayout({
       <head />
       <body className="min-h-screen bg-white dark:bg-gray-900">
         <Providers>
-          <Header />
-          {children}
-          <Footer />
-          <ScrollToTop />
+          <header className="bg-white dark:bg-gray-900 shadow py-4">
+            <div className="container mx-auto flex justify-between items-center">
+              <h1 className="text-xl font-bold">bAInaryglobe</h1>
+              <ThemeToggle />
+            </div>
+          </header>
+          <main>{children}</main>
+          <footer className="bg-gray-100 dark:bg-gray-800 py-6 mt-12">
+            <div className="container mx-auto text-center text-sm text-gray-600">
+              © {new Date().getFullYear()} bAInaryglobe. All rights reserved.
+            </div>
+          </footer>
         </Providers>
       </body>
     </html>
+  );
+}
+
+function ThemeToggle() {
+  const { theme, toggleTheme } = useContext(ThemeContext);
+  return (
+    <button onClick={toggleTheme} className="p-2 border rounded">
+      {theme === "light" ? "Dark Mode" : "Light Mode"}
+    </button>
   );
 }

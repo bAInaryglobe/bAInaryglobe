@@ -1,3 +1,4 @@
+"use client";
 import AboutSectionOne from "@/components/About/AboutSectionOne";
 import AboutSectionTwo from "@/components/About/AboutSectionTwo";
 import Blog from "@/components/Blog";
@@ -20,22 +21,31 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   return (
-    <main className="flex flex-col items-center">
-      <ScrollUp key="scroll-up" />
-      <section className="w-full p-8 text-center">
-        <h1 className="text-4xl font-bold">Welcome to bAInaryglobe</h1>
-        <Hero key="hero" />
-        <Features key="features" />
-        <Video key="video" />
-        <Brands key="brands" />
-        <AboutSectionOne key="about-section-one" />
-        <AboutSectionTwo key="about-section-two" />
-        <Testimonials key="testimonials" />
-        <Pricing key="pricing" />
-        <Blog key="blog" />
-        <Contact key="contact" />
-      </section>
-    </main>
+    <>
+      <Hero />
+      <main className="flex flex-col items-center">
+        <ScrollUp key="scroll-up" />
+        <section className="w-full p-8 text-center">
+          <h1 className="text-4xl font-bold"></h1>
+          <section className="container mx-auto py-12 text-center">
+            <h2 className="text-2xl font-bold">Welcome to bAInaryglobe</h2>
+            <p className="mt-4 text-lg">
+              We blend innovation with AI to deliver extraordinary digital experiences.
+            </p>
+          </section>
+          <Hero key="hero" />
+          <Features key="features" />
+          <Video key="video" />
+          <Brands key="brands" />
+          <AboutSectionOne key="about-section-one" />
+          <AboutSectionTwo key="about-section-two" />
+          <Testimonials key="testimonials" />
+          <Pricing key="pricing" />
+          <Blog key="blog" />
+          <Contact key="contact" />
+        </section>
+      </main>
+    </>
   );
 }
 

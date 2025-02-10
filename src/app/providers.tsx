@@ -1,12 +1,28 @@
 "use client";
 
-import { ThemeProvider } from "next-themes";
+import { createContext, useState, useEffect, ReactNode } from "react";
 
-export function Providers({ children }: { children: React.ReactNode }) {
+export const ThemeContext = createContext({ theme: "light", toggleTheme: () => {} });
+
+export function Providers({ children }: { children: ReactNode }) {
+  const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    const storedTheme = localStorage.getItem("theme") ||
+      (window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark" : "light");
+    setTheme(storedTheme);
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
+  };
+
   return (
-    <ThemeProvider attribute="class" enableSystem={false} defaultTheme="dark">
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
       {children}
-    </ThemeProvider>
+    </ThemeContext.Provider>
   );
 }
 
