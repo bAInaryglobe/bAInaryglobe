@@ -28,7 +28,6 @@ export default function HomePage() {
         <section className="w-full p-8 text-center">
           <h1 className="text-4xl font-bold"></h1>
           <section className="container mx-auto py-12 text-center">
-            <h2 className="text-2xl font-bold">Welcome to bAInaryglobe</h2>
             <p className="mt-4 text-lg">
               We blend innovation with AI to deliver extraordinary digital experiences.
             </p>
