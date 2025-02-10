@@ -7,7 +7,7 @@ import { Inter } from "next/font/google";
 import "node_modules/react-modal-video/css/modal-video.css";
 import "../styles/index.css";
 import { Providers, ThemeContext } from "./providers";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,10 +16,16 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const { theme } = useContext(ThemeContext);
+
+  useEffect(() => {
+    document.body.className = theme === "light" ? "bg-white" : "bg-gray-900";
+  }, [theme]);
+
   return (
     <html suppressHydrationWarning lang="en">
       <head />
-      <body className="min-h-screen bg-white dark:bg-gray-900">
+      <body className="min-h-screen">
         <Providers>
           <header className="bg-white dark:bg-gray-900 shadow py-4">
             <div className="container mx-auto flex justify-between items-center">

@@ -11,12 +11,14 @@ export function Providers({ children }: { children: ReactNode }) {
     const storedTheme = localStorage.getItem("theme") ||
       (window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark" : "light");
     setTheme(storedTheme);
+    document.body.className = storedTheme;
   }, []);
 
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
     localStorage.setItem("theme", newTheme);
+    document.body.className = newTheme;
   };
 
   return (
