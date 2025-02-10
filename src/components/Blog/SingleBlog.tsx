@@ -1,57 +1,137 @@
-import { Blog } from "@/types/blog";
+"use client";
+import { Card, CardContent, CardMedia, Typography, Box, Button, useTheme } from '@mui/material';
+import { motion } from 'framer-motion';
 import Image from "next/image";
 import Link from "next/link";
 
-const SingleBlog = ({ blog }: { blog: Blog }) => {
-  const { title, image, paragraph, author, tags, publishDate } = blog;
+const SingleBlog = ({ blog }: { blog: any }) => {
+  const theme = useTheme();
+
   return (
-    <>
-      <div className="group relative overflow-hidden rounded-sm bg-white shadow-one duration-300 hover:shadow-two dark:bg-dark dark:hover:shadow-gray-dark">
-        <Link
-          href="/blog-details"
-          className="relative block aspect-[37/22] w-full"
-        >
-          <span className="absolute right-6 top-6 z-20 inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold capitalize text-white">
-            {tags[0]}
-          </span>
-          <Image src={image} alt="image" fill />
-        </Link>
-        <div className="p-6 sm:p-8 md:px-6 md:py-8 lg:p-8 xl:px-5 xl:py-8 2xl:p-8">
-          <h3>
-            <Link
-              href="/blog-details"
-              className="mb-4 block text-xl font-bold text-black hover:text-primary dark:text-white dark:hover:text-primary sm:text-2xl"
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.5 }}
+    >
+      <Card
+        sx={{
+          height: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          borderRadius: 4,
+          overflow: 'hidden',
+          backgroundColor: theme.palette.background.paper,
+          transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out',
+          '&:hover': {
+            transform: 'translateY(-8px)',
+            boxShadow: theme.shadows[8],
+          },
+        }}
+      >
+        <Box sx={{ position: 'relative', paddingTop: '60%' }}>
+          <CardMedia
+            component={Image}
+            src={blog.image}
+            alt={blog.title}
+            fill
+            style={{ objectFit: 'cover' }}
+          />
+        </Box>
+
+        <CardContent sx={{ flexGrow: 1, p: 3 }}>
+          <Box sx={{ mb: 2 }}>
+            <Typography
+              variant="caption"
+              sx={{
+                backgroundColor: theme.palette.primary.main,
+                color: 'white',
+                px: 2,
+                py: 0.5,
+                borderRadius: 1,
+                display: 'inline-block',
+              }}
             >
-              {title}
+              {blog.tags[0]}
+            </Typography>
+          </Box>
+
+          <Typography
+            variant="h5"
+            gutterBottom
+            sx={{
+              fontWeight: 600,
+              color: theme.palette.text.primary,
+              display: '-webkit-box',
+              WebkitLineClamp: 2,
+              WebkitBoxOrient: 'vertical',
+              overflow: 'hidden',
+              mb: 2,
+            }}
+          >
+            {blog.title}
+          </Typography>
+
+          <Typography
+            variant="body2"
+            color="text.secondary"
+            sx={{
+              mb: 3,
+              display: '-webkit-box',
+              WebkitLineClamp: 3,
+              WebkitBoxOrient: 'vertical',
+              overflow: 'hidden',
+            }}
+          >
+            {blog.paragraph}
+          </Typography>
+
+          <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+            <Box sx={{ display: 'flex', alignItems: 'center' }}>
+              <Box
+                sx={{
+                  width: 40,
+                  height: 40,
+                  borderRadius: '50%',
+                  overflow: 'hidden',
+                  position: 'relative',
+                  mr: 1,
+                }}
+              >
+                <Image
+                  src={blog.author.image}
+                  alt={blog.author.name}
+                  fill
+                  style={{ objectFit: 'cover' }}
+                />
+              </Box>
+              <Box>
+                <Typography variant="subtitle2" color="text.primary">
+                  {blog.author.name}
+                </Typography>
+                <Typography variant="caption" color="text.secondary">
+                  {blog.publishDate}
+                </Typography>
+              </Box>
+            </Box>
+
+            <Link href={`/blog/${blog.id}`} passHref>
+              <Button
+                variant="text"
+                sx={{
+                  color: theme.palette.primary.main,
+                  '&:hover': {
+                    backgroundColor: theme.palette.action.hover,
+                  },
+                }}
+              >
+                Read More
+              </Button>
             </Link>
-          </h3>
-          <p className="mb-6 border-b border-body-color border-opacity-10 pb-6 text-base font-medium text-body-color dark:border-white dark:border-opacity-10">
-            {paragraph}
-          </p>
-          <div className="flex items-center">
-            <div className="mr-5 flex items-center border-r border-body-color border-opacity-10 pr-5 dark:border-white dark:border-opacity-10 xl:mr-3 xl:pr-3 2xl:mr-5 2xl:pr-5">
-              <div className="mr-4">
-                <div className="relative h-10 w-10 overflow-hidden rounded-full">
-                  <Image src={author.image} alt="author" fill />
-                </div>
-              </div>
-              <div className="w-full">
-                <h4 className="mb-1 text-sm font-medium text-dark dark:text-white">
-                  By {author.name}
-                </h4>
-                <p className="text-xs text-body-color">{author.designation}</p>
-              </div>
-            </div>
-            <div className="inline-block">
-              <h4 className="mb-1 text-sm font-medium text-dark dark:text-white">
-                Date
-              </h4>
-              <p className="text-xs text-body-color">{publishDate}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </>
+          </Box>
+        </CardContent>
+      </Card>
+    </motion.div>
   );
 };
 

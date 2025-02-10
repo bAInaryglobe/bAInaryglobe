@@ -1,79 +1,143 @@
-const PricingBox = (props: {
-  price: string;
-  duration: string;
-  packageName: string;
-  subtitle: string;
-  children: React.ReactNode;
-}) => {
-  const { price, duration, packageName, subtitle, children } = props;
+"use client";
+import { Box, Card, CardContent, Typography, Button, Container, Grid, useTheme } from '@mui/material';
+import { motion } from 'framer-motion';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+
+const PricingBox = ({ price, popular }: { price: any; popular?: boolean }) => {
+  const theme = useTheme();
 
   return (
-    <div className="w-full">
-      <div className="relative z-10 rounded-sm bg-white px-8 py-10 shadow-three hover:shadow-one dark:bg-gray-dark dark:shadow-two dark:hover:shadow-gray-dark">
-        <div className="flex items-center justify-between">
-          <h3 className="price mb-2 text-[32px] font-bold text-black dark:text-white">
-            $<span className="amount">{price}</span>
-            <span className="time text-lg font-medium text-body-color">
-              /{duration}
-            </span>
-          </h3>
-          <h4 className="mb-2 text-xl font-bold text-dark dark:text-white">
-            {packageName}
-          </h4>
-        </div>
-        <p className="mb-7 text-base text-body-color">{subtitle}</p>
-        <div className="mb-8 border-b border-body-color border-opacity-10 pb-8 dark:border-white dark:border-opacity-10">
-          <button className="flex w-full items-center justify-center rounded-sm bg-primary p-3 text-base font-semibold text-white transition duration-300 ease-in-out hover:bg-opacity-80 hover:shadow-signUp">
-            Start Free Trial
-          </button>
-        </div>
-        <div>{children}</div>
-        <div className="absolute bottom-0 right-0 z-[-1]">
-          <svg
-            width="179"
-            height="158"
-            viewBox="0 0 179 158"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+    >
+      <Card
+        sx={{
+          height: '100%',
+          position: 'relative',
+          borderRadius: 4,
+          overflow: 'visible',
+          transform: popular ? 'scale(1.05)' : 'scale(1)',
+          backgroundColor: theme.palette.background.paper,
+          transition: 'all 0.3s ease-in-out',
+          '&:hover': {
+            transform: popular ? 'scale(1.08)' : 'scale(1.03)',
+            boxShadow: theme.shadows[8],
+          },
+          '&::before': {
+            content: '""',
+            position: 'absolute',
+            top: -2,
+            left: -2,
+            right: -2,
+            bottom: -2,
+            background: `linear-gradient(45deg, ${theme.palette.primary.main}, ${theme.palette.primary.light})`,
+            borderRadius: '20px',
+            zIndex: -1,
+            opacity: popular ? 0.2 : 0,
+            transition: 'opacity 0.3s ease-in-out',
+          },
+          '&:hover::before': {
+            opacity: 0.2,
+          },
+        }}
+      >
+        {popular && (
+          <Box
+            sx={{
+              position: 'absolute',
+              top: -15,
+              right: 20,
+              backgroundColor: theme.palette.primary.main,
+              color: 'white',
+              px: 3,
+              py: 1,
+              borderRadius: '15px',
+              fontSize: '0.875rem',
+              fontWeight: 600,
+              boxShadow: theme.shadows[2],
+            }}
           >
-            <path
-              opacity="0.5"
-              d="M75.0002 63.256C115.229 82.3657 136.011 137.496 141.374 162.673C150.063 203.47 207.217 197.755 202.419 167.738C195.393 123.781 137.273 90.3579 75.0002 63.256Z"
-              fill="url(#paint0_linear_70:153)"
-            />
-            <path
-              opacity="0.3"
-              d="M178.255 0.150879C129.388 56.5969 134.648 155.224 143.387 197.482C157.547 265.958 65.9705 295.709 53.1024 246.401C34.2588 174.197 100.939 83.7223 178.255 0.150879Z"
-              fill="url(#paint1_linear_70:153)"
-            />
-            <defs>
-              <linearGradient
-                id="paint0_linear_70:153"
-                x1="69.6694"
-                y1="29.9033"
-                x2="196.108"
-                y2="83.2919"
-                gradientUnits="userSpaceOnUse"
+            Popular
+          </Box>
+        )}
+
+        <CardContent sx={{ p: 4 }}>
+          <Typography
+            variant="h3"
+            sx={{
+              mb: 2,
+              fontSize: '2rem',
+              fontWeight: 700,
+              color: theme.palette.text.primary,
+            }}
+          >
+            {price.package}
+          </Typography>
+
+          <Box sx={{ mb: 4 }}>
+            <Typography
+              variant="h2"
+              sx={{
+                fontSize: '3.5rem',
+                fontWeight: 800,
+                color: theme.palette.primary.main,
+                display: 'inline',
+              }}
+            >
+              ${price.price}
+            </Typography>
+            <Typography
+              variant="subtitle1"
+              sx={{
+                color: theme.palette.text.secondary,
+                display: 'inline',
+                ml: 1,
+              }}
+            >
+              /month
+            </Typography>
+          </Box>
+
+          <Box sx={{ mb: 4 }}>
+            {price.features.map((feature: string, index: number) => (
+              <Box
+                key={index}
+                sx={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  mb: 2,
+                }}
               >
-                <stop stopColor="#4A6CF7" stopOpacity="0.62" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
-              </linearGradient>
-              <linearGradient
-                id="paint1_linear_70:153"
-                x1="165.348"
-                y1="-75.4466"
-                x2="-3.75136"
-                y2="103.645"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" stopOpacity="0.62" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>
-      </div>
-    </div>
+                <CheckCircleIcon sx={{ color: theme.palette.primary.main, mr: 1 }} />
+                <Typography variant="body1" color="text.primary">
+                  {feature}
+                </Typography>
+              </Box>
+            ))}
+          </Box>
+
+          <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
+            <Button
+              variant={popular ? "contained" : "outlined"}
+              fullWidth
+              size="large"
+              sx={{
+                py: 1.5,
+                borderRadius: 2,
+                textTransform: 'none',
+                fontWeight: 600,
+                fontSize: '1rem',
+              }}
+            >
+              Get Started
+            </Button>
+          </motion.div>
+        </CardContent>
+      </Card>
+    </motion.div>
   );
 };
 

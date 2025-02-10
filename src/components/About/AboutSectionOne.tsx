@@ -1,77 +1,135 @@
+"use client";
+import { Box, Container, Grid, Typography, Paper, useTheme } from '@mui/material';
 import Image from "next/image";
-import SectionTitle from "../Common/SectionTitle";
-
-const checkIcon = (
-  <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
-    <path d="M5.8535 12.6631C5.65824 12.8584 5.34166 12.8584 5.1464 12.6631L0.678505 8.1952C0.483242 7.99994 0.483242 7.68336 0.678505 7.4881L2.32921 5.83739C2.52467 5.64193 2.84166 5.64216 3.03684 5.83791L5.14622 7.95354C5.34147 8.14936 5.65859 8.14952 5.85403 7.95388L13.3797 0.420561C13.575 0.22513 13.8917 0.225051 14.087 0.420383L15.7381 2.07143C15.9333 2.26669 15.9333 2.58327 15.7381 2.77854L5.8535 12.6631Z" />
-  </svg>
-);
+import { motion } from 'framer-motion';
 
 const AboutSectionOne = () => {
-  const List = ({ text }) => (
-    <p className="mb-5 flex items-center text-lg font-medium text-body-color">
-      <span className="mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md bg-primary bg-opacity-10 text-primary">
-        {checkIcon}
-      </span>
-      {text}
-    </p>
-  );
+  const theme = useTheme();
 
   return (
-    <section id="about" className="pt-16 md:pt-20 lg:pt-28">
-      <div className="container">
-        <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
-          <div className="-mx-4 flex flex-wrap items-center">
-            <div className="w-full px-4 lg:w-1/2">
-              <SectionTitle
-                title="Brand Voice"
-                paragraph="Experience the best suite of digital solutions on the
-                market"
-
-
-                mb="44px"
-              />
-
-              <div
-                className="mb-12 max-w-[570px] lg:mb-0"
-                data-wow-delay=".15s"
+    <Box
+      component="section"
+      sx={{
+        py: { xs: 8, md: 12 },
+        backgroundColor: theme.palette.background.default,
+      }}
+    >
+      <Container maxWidth="lg">
+        <Grid container spacing={6} alignItems="center">
+          <Grid item xs={12} lg={6}>
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <Paper
+                elevation={0}
+                sx={{
+                  position: 'relative',
+                  height: '500px',
+                  borderRadius: 4,
+                  overflow: 'hidden',
+                  transform: 'perspective(1000px) rotateY(-5deg)',
+                  transition: 'transform 0.5s ease-in-out',
+                  '&:hover': {
+                    transform: 'perspective(1000px) rotateY(0deg)',
+                  },
+                }}
               >
-                <div className="mx-[-12px] flex flex-wrap">
-                  <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Premium quality" />
-                    <List text="Quality services" />
-                    <List text="Fast delivery" />
-                  </div>
-
-                  <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text=" 24/7 Customer service" />
-                    <List text="Rich documentation" />
-                    <List text="Developer friendly" />
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="w-full px-4 lg:w-1/2">
-              <div className="relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-0">
                 <Image
                   src="/images/about/about-image.svg"
-                  alt="about-image"
+                  alt="About Image"
                   fill
-                  className="mx-auto max-w-full drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
+                  style={{ objectFit: 'cover' }}
                 />
-                <Image
-                  src="/images/about/about-image-dark.svg"
-                  alt="about-image"
-                  fill
-                  className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none lg:mr-0"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+              </Paper>
+            </motion.div>
+          </Grid>
+          
+          <Grid item xs={12} lg={6}>
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <Typography
+                variant="h2"
+                sx={{
+                  mb: 4,
+                  fontSize: { xs: '2rem', md: '2.5rem' },
+                  fontWeight: 700,
+                  background: `linear-gradient(45deg, ${theme.palette.primary.main}, ${theme.palette.primary.light})`,
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                }}
+              >
+                Crafting Digital Excellence
+              </Typography>
+
+              <Typography
+                variant="body1"
+                color="text.secondary"
+                sx={{
+                  mb: 4,
+                  fontSize: '1.1rem',
+                  lineHeight: 1.8,
+                }}
+              >
+                We combine cutting-edge AI technology with creative solutions to transform your digital presence. Our team of experts is dedicated to delivering innovative solutions that drive real business results.
+              </Typography>
+
+              <Grid container spacing={4}>
+                {[
+                  { number: "100+", text: "Projects Completed" },
+                  { number: "50+", text: "Happy Clients" },
+                  { number: "10+", text: "Awards Won" },
+                ].map((stat, index) => (
+                  <Grid item xs={6} sm={4} key={index}>
+                    <motion.div
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                    >
+                      <Paper
+                        elevation={0}
+                        sx={{
+                          p: 3,
+                          textAlign: 'center',
+                          borderRadius: 4,
+                          backgroundColor: theme.palette.background.paper,
+                          transition: 'transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out',
+                          '&:hover': {
+                            transform: 'translateY(-4px)',
+                            boxShadow: theme.shadows[4],
+                          },
+                        }}
+                      >
+                        <Typography
+                          variant="h3"
+                          sx={{
+                            color: theme.palette.primary.main,
+                            fontWeight: 700,
+                            mb: 1,
+                          }}
+                        >
+                          {stat.number}
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                          {stat.text}
+                        </Typography>
+                      </Paper>
+                    </motion.div>
+                  </Grid>
+                ))}
+              </Grid>
+            </motion.div>
+          </Grid>
+        </Grid>
+      </Container>
+    </Box>
   );
 };
 
