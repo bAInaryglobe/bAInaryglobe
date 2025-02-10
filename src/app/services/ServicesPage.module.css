@@ -142,3 +142,11 @@
     transform: translateY(0);
   }
 }
+
+.enhancedServicesLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  /* Additional responsive styles */
+}

@@ -9,17 +9,15 @@ export const metadata: Metadata = {
   // other metadata
 };
 
-const ContactPage = () => {
+export default function ContactPage() {
   return (
-    <>
+    <main className="mx-auto max-w-screen-md p-8">
+      <h1 className="mb-6 text-2xl font-bold">Contact Us</h1>
       <Breadcrumb
         pageName="Contact Page"
         description="Having any issues? you can contact us at bAInaryglobe from here."
       />
-
       <Contact />
-    </>
+    </main>
   );
-};
-
-export default ContactPage;
+}

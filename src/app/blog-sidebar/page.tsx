@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   // other metadata
 };
 
-const BlogSidebarPage = () => {
+export default function BlogSidebarPage() {
   return (
     <>
       <section className="overflow-hidden pb-[120px] pt-[180px]">
@@ -457,6 +457,4 @@ const BlogSidebarPage = () => {
       </section>
     </>
   );
-};
-
-export default BlogSidebarPage;
+}

@@ -10,10 +10,11 @@ export const metadata: Metadata = {
   // other metadata
 };
 
-const BlogDetailsPage = () => {
+export default function BlogDetailsPage() {
   return (
     <>
       <section className="pb-[120px] pt-[150px]">
+        {/* Fetch single post data from a robust source, replace placeholders */}
         <div className="container">
           <div className="-mx-4 flex flex-wrap justify-center">
             <div className="w-full px-4 lg:w-8/12">
@@ -363,6 +364,4 @@ EASE OF USE
       </section>
     </>
   );
-};
-
-export default BlogDetailsPage;
+}

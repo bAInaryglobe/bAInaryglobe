@@ -18,21 +18,24 @@ export const metadata: Metadata = {
   // other metadata
 };
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <>
+    <main className="flex flex-col items-center">
       <ScrollUp key="scroll-up" />
-      <Hero key="hero" />
-      <Features key="features" />
-      <Video key="video" />
-      <Brands key="brands" />
-      <AboutSectionOne key="about-section-one" />
-      <AboutSectionTwo key="about-section-two" />
-      <Testimonials key="testimonials" />
-      <Pricing key="pricing" />
-      <Blog key="blog" />
-      <Contact key="contact" />
-    </>
+      <section className="w-full p-8 text-center">
+        <h1 className="text-4xl font-bold">Welcome to bAInaryglobe</h1>
+        <Hero key="hero" />
+        <Features key="features" />
+        <Video key="video" />
+        <Brands key="brands" />
+        <AboutSectionOne key="about-section-one" />
+        <AboutSectionTwo key="about-section-two" />
+        <Testimonials key="testimonials" />
+        <Pricing key="pricing" />
+        <Blog key="blog" />
+        <Contact key="contact" />
+      </section>
+    </main>
   );
 }
 

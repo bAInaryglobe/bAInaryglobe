@@ -10,17 +10,15 @@ export const metadata: Metadata = {
   // other metadata
 };
 
-const AboutPage = () => {
+export default function AboutPage() {
   return (
     <>
       <Breadcrumb
         pageName="About Page"
-        description="Helping millions of people find their ideal digital solutions, bAInary Globe combines innovation with practicality to shape the future of technology with user-centric design and excellence."
+        description="bAInary Globe: Innovating with a user-centric approach."
       />
       <AboutSectionOne />
       <AboutSectionTwo />
     </>
   );
-};
-
-export default AboutPage;
+}
