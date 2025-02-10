@@ -1,7 +1,6 @@
 "use client";
 import { Box, Card, CardContent, Typography, Button, Container, Grid, useTheme } from '@mui/material';
 import { motion } from 'framer-motion';
-import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 
 interface PricingProps {
   packageName: string;
