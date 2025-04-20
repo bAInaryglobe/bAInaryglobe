@@ -3,6 +3,7 @@ import { Blog } from "@/types/blog";
 const blogData: Blog[] = [
   {
     id: 1,
+    slug: "ui-design-methodology",
     title: "bAInaryglobe's UI design methodology",
     paragraph:
       "Technology has moved beyond the era of unorganized design, and bAInaryglobe's design methodology is far ahead of the modern status quo.",
@@ -18,6 +19,7 @@ const blogData: Blog[] = [
 
   {
     id: 2,
+    slug: "improve-design-skills",
     title: "9 simple ways to improve your design skills",
     paragraph:
       "Technology",
@@ -32,6 +34,7 @@ const blogData: Blog[] = [
   },
   {
     id: 3,
+    slug: "improve-coding-speed",
     title: "Tips to quickly improve your coding speed.",
     paragraph:
       "Technology",
@@ -46,7 +49,8 @@ const blogData: Blog[] = [
   },
 
   {
-    id: 3,
+    id: 4,
+    slug: "build-million-dollar-company",
     title: " How to build a Million dollar company",
     paragraph:
       "Technology",
