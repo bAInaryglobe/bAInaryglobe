@@ -58,7 +58,7 @@ const blogData: Blog[] = [
     author: {
       name: "Ben Lucky",
       image: "/images/blog/author-03a.png",
-      designation: "Backend developer",
+      designation: "founder, bAInaryglobe",
     },
     tags: ["design"],
     publishDate: "2025",
