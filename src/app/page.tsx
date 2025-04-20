@@ -6,6 +6,7 @@ import ScrollUp from "@/components/Common/ScrollUp";
 import Contact from "@/components/Contact";
 import Features from "@/components/Features";
 import Hero from "@/components/Hero";
+import Milestones from "@/components/Milestones";
 import Pricing from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
 import Video from "@/components/Video";
@@ -24,6 +25,7 @@ export default function Home() {
       <ScrollUp key="scroll-up" />
       <Hero key="hero" />
       <Features key="features" />
+      <Milestones key="milestones" />
       <Video key="video" />
       <Brands key="brands" />
       <AboutSectionOne key="about-section-one" />

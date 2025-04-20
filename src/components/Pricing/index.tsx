@@ -71,19 +71,22 @@ const Pricing = () => {
             <OfferList text="access to VXTrainer plus" status="inactive" />
             <OfferList text="Free updates" status="inactive" />
           </PricingBox>
-          <PricingBox
-            packageName="Basic"
-            price={isMonthly ? "399" : "789"}
-            duration={isMonthly ? "mo" : "yr"}
-            subtitle="fundamental plan with bAInaryglobe services"
-          >
-            <OfferList text="Access to source code of some products" status="active" />
-            <OfferList text="Access to bAInaryglobe's design IDE, bAIde" status="active" />
-            <OfferList text="use our software on multiple devices" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Quality customer support" status="active" />
-            <OfferList text="Free Updates and all in the Lite plan" status="inactive" />
-          </PricingBox>
+          <div className="relative">
+            <span className="absolute -top-5 left-1/2 -translate-x-1/2 z-10 bg-primary text-white text-xs font-bold px-4 py-1 rounded-full shadow-lg animate-bounce">Most Popular</span>
+            <PricingBox
+              packageName="Basic"
+              price={isMonthly ? "399" : "789"}
+              duration={isMonthly ? "mo" : "yr"}
+              subtitle="fundamental plan with bAInaryglobe services"
+            >
+              <OfferList text="Access to source code of some products" status="active" />
+              <OfferList text="Access to bAInaryglobe's design IDE, bAIde" status="active" />
+              <OfferList text="use our software on multiple devices" status="active" />
+              <OfferList text="Email Support" status="active" />
+              <OfferList text="Quality customer support" status="active" />
+              <OfferList text="Free Updates and all in the Lite plan" status="inactive" />
+            </PricingBox>
+          </div>
           <PricingBox
             packageName="Plus"
             price={isMonthly ? "589" : "999"}
@@ -97,6 +100,23 @@ const Pricing = () => {
             <OfferList text="Security Updates" status="active" />
             <OfferList text="Free Updates and all in the Basic plan" status="active" />
           </PricingBox>
+        </div>
+        <div className="mt-16 max-w-2xl mx-auto">
+          <h3 className="text-2xl font-bold text-center mb-6 text-primary">Frequently Asked Questions</h3>
+          <div className="space-y-4">
+            <div className="rounded-lg bg-white dark:bg-gray-900 shadow p-4 transition hover:shadow-lg">
+              <h4 className="font-semibold text-lg mb-2">Can I change my plan later?</h4>
+              <p className="text-gray-600 dark:text-gray-300">Absolutely! You can upgrade or downgrade your plan at any time from your dashboard.</p>
+            </div>
+            <div className="rounded-lg bg-white dark:bg-gray-900 shadow p-4 transition hover:shadow-lg">
+              <h4 className="font-semibold text-lg mb-2">Is there a free trial?</h4>
+              <p className="text-gray-600 dark:text-gray-300">Yes, we offer a 14-day free trial for all new users. No credit card required.</p>
+            </div>
+            <div className="rounded-lg bg-white dark:bg-gray-900 shadow p-4 transition hover:shadow-lg">
+              <h4 className="font-semibold text-lg mb-2">What payment methods do you accept?</h4>
+              <p className="text-gray-600 dark:text-gray-300">We accept all major credit cards, PayPal, and bank transfers for annual plans.</p>
+            </div>
+          </div>
         </div>
       </div>
 
