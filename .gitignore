@@ -37,3 +37,4 @@ amplify_outputs*
 amplifyconfiguration*
 
 docx/
+**.env*

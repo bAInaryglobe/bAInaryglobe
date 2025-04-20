@@ -1,0 +1,24 @@
+# Sample environment variables for bAInaryglobe
+# Copy this file to .env.local and fill in values before running the app
+
+# App mode (development or production)
+NODE_ENV=development
+
+# Base URLs
+# In development this is typically http://localhost:3000
+NEXT_PUBLIC_CLIENT_BASE_URL=http://localhost:3000
+# In production set your real domain
+NEXT_PUBLIC_CLIENT_BASE_URL_PROD=https://your-production-domain.com
+
+# NextAuth (server-side only)
+# Secret for encrypting JWT sessions
+NEXTAUTH_SECRET=your_nextauth_secret_here
+# Admin credentials for protected routes
+ADMIN_USER=admin_username_here
+ADMIN_PASS=admin_password_here
+
+# Appwrite configuration
+# Appwrite endpoint (region-based)
+NEXT_PUBLIC_APPWRITE_ENDPOINT=https://<REGION>.cloud.appwrite.io/v1
+# Appwrite project identifier
+NEXT_PUBLIC_APPWRITE_PROJECT_ID=<PROJECT_ID>
