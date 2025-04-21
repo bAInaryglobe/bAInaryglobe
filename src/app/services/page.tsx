@@ -1,5 +1,3 @@
-import SharePost from "@/components/Blog/SharePost";
-import TagButton from "@/components/Blog/TagButton";
 import Image from "next/image";
 import styles from './ServicesPage.module.css';
 
@@ -88,24 +86,11 @@ const services = [
 const ServicesPage = () => {
     return (
       <div className={styles.container}>
-        <h1 style={{
-          fontSize: '2.5rem',
-          textAlign: 'center',
-          marginBottom: '40px',
-          background: 'linear-gradient(90deg, #4A6CF7, #0070f3)',
-          WebkitBackgroundClip: 'text',
-          WebkitTextFillColor: 'transparent',
-          animation: 'fadeIn 0.5s ease'
-        }}>
-          Bainaryglobe Services
-        </h1>
+        <h1 className={styles.title}>Bainaryglobe Services</h1>
+        <p className={styles.subtitle}>Explore our curated services tailored to meet your needs.</p>
         <div className={styles.servicesList}>
           {services.map((service, index) => (
-            <div 
-              key={index} 
-              className={styles.card}
-              style={{ '--animation-order': index } as any}
-            >
+            <div key={index} className={styles.card}>
               <div className={styles.imageWrapper}>
                 <Image
                   src={service.image}
