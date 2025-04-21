@@ -26,7 +26,6 @@ export default function Home() {
       <Hero key="hero" />
       <Features key="features" />
       <Milestones key="milestones" />
-      <Video key="video" />
       <Brands key="brands" />
       <AboutSectionOne key="about-section-one" />
       <AboutSectionTwo key="about-section-two" />
