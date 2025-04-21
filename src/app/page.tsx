@@ -31,7 +31,6 @@ export default function Home() {
       <AboutSectionOne key="about-section-one" />
       <AboutSectionTwo key="about-section-two" />
       <Testimonials key="testimonials" />
-      <Pricing key="pricing" />
       <Blog key="blog" />
       <Contact key="contact" />
     </>
