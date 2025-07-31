@@ -1,116 +1,286 @@
 import Image from "next/image";
-import styles from './ServicesPage.module.css';
-
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Bainaryglobe services",
-  description: "This is list of services offered bAInaryglobe",
-  // other metadata
+  title: "Bainaryglobe Services",
+  description: "Discover our comprehensive suite of innovative services designed to transform your digital experience.",
 };
 
-
-// const Services =
-
-// Curated list of services offered by bainaryglobe
 const services = [
     {
       image: '/vexeroo.png',
       name: 'Vexeroo',
-      description: 'Description of Service One',
+      description: 'Your comprehensive lifestyle platform that brings everything you need in one place.',
+      category: 'Platform',
+      featured: true,
     },
     {
       image: '/vxfit.png',
-      name: 'Vexeroo car',
-      description: 'Description of Service Two',
+      name: 'Vexeroo Car',
+      description: 'Premium automotive solutions integrated with smart technology for modern transportation.',
+      category: 'Automotive',
+      featured: false,
     },
     {
         image: '/vxfit.png',
-        name: 'Vxfit',
-        description: 'Vxfit is a fitness app designed for busy, office individuals'
+        name: 'VxFit',
+        description: 'A fitness app designed for busy office individuals to maintain healthy lifestyles.',
+        category: 'Health & Fitness',
+        featured: true,
     },
     {
         image: '/vxfit.png',
         name: 'See Naija',
-        description: ' Tourism attractions right within the vexeroo app'
+        description: 'Discover Nigeria\'s tourism attractions right within the Vexeroo ecosystem.',
+        category: 'Travel & Tourism',
+        featured: false,
     },
     {
         image: '/vxfit.png',
         name: 'VxReels',
-        description: 'View reels, live sessions of product unveilings, and much more'
+        description: 'View engaging reels, live sessions of product unveilings, and much more.',
+        category: 'Entertainment',
+        featured: false,
     },
-
     {
         image: '/vxfit.png',
         name: 'VxFuel',
-        description: 'Order fuel from the comfort of your home, dont break a sweat'
+        description: 'Order fuel from the comfort of your home - no hassle, no sweat.',
+        category: 'Energy & Utilities',
+        featured: false,
     },
     {
         image: '/vxfit.png',
         name: 'VxCars',
-        description: 'Rent a car as easy as it gets, no problem!'
+        description: 'Rent a car as easy as it gets - seamless, reliable, hassle-free.',
+        category: 'Transportation',
+        featured: true,
     },
     {
         image: '/vxfit.png',
         name: 'VxAI',
-        description: 'Chat with a fully customizable assistant to help you with daily activities'
+        description: 'Chat with a fully customizable AI assistant for your daily activities.',
+        category: 'AI & Technology',
+        featured: true,
     },
-
     {
         image: '/vxhome.png',
         name: 'VxHome',
-        description: 'Vexeroo homes provides house rental, house sharing, and others without meddling agents'
+        description: 'House rental and sharing solutions without the middleman complexity.',
+        category: 'Real Estate',
+        featured: false,
     },
-    
     {
         image: '/vxflight.png',
         name: 'VxFlight',
-        description: 'from your home, straight to the airport, no hassle involved we take care of all that.'
+        description: 'From your home straight to the airport - we handle all the logistics.',
+        category: 'Travel & Transportation',
+        featured: false,
     },
-    
-    // {
-    //     image: '',
-    //     name: 'VxAI',
-    //     description: ''
-    // },
-    
-    // {
-    //     image: '',
-    //     name: 'VxAI',
-    //     description: ''
-    // },
-    
-    // Add more services as needed
-  ];
+];
+
+const categoryColors = {
+  'Platform': 'bg-gradient-to-r from-purple-500 to-pink-500',
+  'Automotive': 'bg-gradient-to-r from-blue-500 to-cyan-500',
+  'Health & Fitness': 'bg-gradient-to-r from-green-500 to-emerald-500',
+  'Travel & Tourism': 'bg-gradient-to-r from-orange-500 to-red-500',
+  'Entertainment': 'bg-gradient-to-r from-pink-500 to-rose-500',
+  'Energy & Utilities': 'bg-gradient-to-r from-yellow-500 to-orange-500',
+  'Transportation': 'bg-gradient-to-r from-indigo-500 to-blue-500',
+  'AI & Technology': 'bg-gradient-to-r from-violet-500 to-purple-500',
+  'Real Estate': 'bg-gradient-to-r from-teal-500 to-green-500',
+  'Travel & Transportation': 'bg-gradient-to-r from-sky-500 to-blue-500',
+};
 
 const ServicesPage = () => {
+    const featuredServices = services.filter(service => service.featured);
+    const regularServices = services.filter(service => !service.featured);
+
     return (
-      <div className={styles.container}>
-        <h1 className={styles.title}>Bainaryglobe Services</h1>
-        <p className={styles.subtitle}>Explore our curated services tailored to meet your needs.</p>
-        <div className={styles.servicesList}>
-          {services.map((service, index) => (
-            <div key={index} className={styles.card}>
-              <div className={styles.imageWrapper}>
-                <Image
-                  src={service.image}
-                  alt={service.name}
-                  width={80}
-                  height={80}
-                  className={styles.image}
-                />
+      <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+        {/* Hero Section */}
+        <section className="relative overflow-hidden bg-white dark:bg-gray-900 pt-[120px] pb-16 md:pt-[150px] md:pb-20 lg:pt-[180px] lg:pb-28">
+          <div className="container mx-auto px-4">
+            <div className="text-center">
+              <div className="mx-auto mb-6 max-w-4xl">
+                <h1 className="mb-6 text-4xl font-bold leading-tight text-black dark:text-white sm:text-5xl lg:text-6xl">
+                  Our <span className="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">Services</span>
+                </h1>
+                <p className="text-lg text-body-color dark:text-gray-300 sm:text-xl lg:text-2xl">
+                  Discover our comprehensive suite of innovative services designed to transform your digital experience.
+                </p>
               </div>
-              <div className={styles.details}>
-                <h2 className={styles.name}>{service.name}</h2>
-                <p className={styles.description}>{service.description}</p>
-              </div>
-              <div className={styles.buttons}>
-                <button className={styles.learnMore}>Learn More</button>
-                <button className={styles.signUp}>Sign Up</button>
+              
+              {/* Stats Section */}
+              <div className="mx-auto mb-12 grid max-w-4xl grid-cols-2 gap-4 sm:grid-cols-4 lg:gap-8">
+                <div className="rounded-lg bg-primary/5 p-4 dark:bg-primary/10">
+                  <div className="text-2xl font-bold text-primary lg:text-3xl">{services.length}+</div>
+                  <div className="text-sm text-body-color dark:text-gray-300">Services</div>
+                </div>
+                <div className="rounded-lg bg-green-50 p-4 dark:bg-green-900/20">
+                  <div className="text-2xl font-bold text-green-600 lg:text-3xl">24/7</div>
+                  <div className="text-sm text-body-color dark:text-gray-300">Support</div>
+                </div>
+                <div className="rounded-lg bg-blue-50 p-4 dark:bg-blue-900/20">
+                  <div className="text-2xl font-bold text-blue-600 lg:text-3xl">99.9%</div>
+                  <div className="text-sm text-body-color dark:text-gray-300">Uptime</div>
+                </div>
+                <div className="rounded-lg bg-purple-50 p-4 dark:bg-purple-900/20">
+                  <div className="text-2xl font-bold text-purple-600 lg:text-3xl">AI</div>
+                  <div className="text-sm text-body-color dark:text-gray-300">Powered</div>
+                </div>
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+          
+          {/* Background Elements */}
+          <div className="absolute left-0 top-0 -z-10 h-full w-full">
+            <div className="absolute left-0 top-0 h-full w-full bg-gradient-to-br from-primary/5 via-transparent to-blue-500/5"></div>
+          </div>
+        </section>
+
+        {/* Featured Services */}
+        {featuredServices.length > 0 && (
+          <section className="py-16 lg:py-20">
+            <div className="container mx-auto px-4">
+              <div className="mb-12 text-center">
+                <h2 className="mb-4 text-3xl font-bold text-black dark:text-white sm:text-4xl">
+                  Featured Services
+                </h2>
+                <p className="text-lg text-body-color dark:text-gray-300">
+                  Our most popular and innovative solutions
+                </p>
+              </div>
+
+              <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                {featuredServices.map((service, index) => (
+                  <div
+                    key={index}
+                    className="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl dark:bg-gray-800"
+                  >
+                    {/* Featured Badge */}
+                    <div className="absolute right-4 top-4 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 px-3 py-1 text-xs font-medium text-white">
+                      Featured
+                    </div>
+                    
+                    {/* Category Badge */}
+                    <div className={`absolute left-4 top-4 rounded-full ${categoryColors[service.category] || 'bg-gray-500'} px-3 py-1 text-xs font-medium text-white`}>
+                      {service.category}
+                    </div>
+
+                    <div className="flex flex-col items-center text-center">
+                      <div className="mb-6 mt-8 flex h-20 w-20 items-center justify-center rounded-full bg-primary/10 p-4">
+                        <Image
+                          src={service.image}
+                          alt={service.name}
+                          width={64}
+                          height={64}
+                          className="h-full w-full object-contain"
+                        />
+                      </div>
+
+                      <h3 className="mb-3 text-xl font-semibold text-black dark:text-white">
+                        {service.name}
+                      </h3>
+
+                      <p className="mb-6 text-body-color dark:text-gray-300">
+                        {service.description}
+                      </p>
+
+                      <div className="flex w-full flex-col gap-3 sm:flex-row">
+                        <button className="flex-1 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-primary/90">
+                          Learn More
+                        </button>
+                        <button className="flex-1 rounded-lg border border-primary px-4 py-2 text-sm font-medium text-primary transition-colors hover:bg-primary hover:text-white dark:border-primary dark:text-primary">
+                          Get Started
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {/* All Services */}
+        <section className="py-16 lg:py-20">
+          <div className="container mx-auto px-4">
+            <div className="mb-12 text-center">
+              <h2 className="mb-4 text-3xl font-bold text-black dark:text-white sm:text-4xl">
+                All Services
+              </h2>
+              <p className="text-lg text-body-color dark:text-gray-300">
+                Complete range of solutions for your business needs
+              </p>
+            </div>
+
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              {services.map((service, index) => (
+                <div
+                  key={index}
+                  className="group overflow-hidden rounded-xl bg-white p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:bg-gray-800"
+                >
+                  {/* Category Badge */}
+                  <div className={`mb-4 inline-block rounded-full ${categoryColors[service.category] || 'bg-gray-500'} px-3 py-1 text-xs font-medium text-white`}>
+                    {service.category}
+                  </div>
+
+                  <div className="flex flex-col">
+                    <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-lg bg-gray-50 dark:bg-gray-700">
+                      <Image
+                        src={service.image}
+                        alt={service.name}
+                        width={40}
+                        height={40}
+                        className="h-8 w-8 object-contain"
+                      />
+                    </div>
+
+                    <h3 className="mb-2 text-lg font-semibold text-black dark:text-white">
+                      {service.name}
+                    </h3>
+
+                    <p className="mb-4 flex-1 text-sm text-body-color dark:text-gray-300">
+                      {service.description}
+                    </p>
+
+                    <div className="flex gap-2">
+                      <button className="flex-1 rounded-lg bg-primary/10 px-3 py-2 text-xs font-medium text-primary transition-colors hover:bg-primary/20 dark:bg-primary/20 dark:hover:bg-primary/30">
+                        Learn More
+                      </button>
+                      <button className="rounded-lg border border-gray-200 px-3 py-2 text-xs font-medium text-gray-600 transition-colors hover:border-primary hover:text-primary dark:border-gray-600 dark:text-gray-300 dark:hover:border-primary dark:hover:text-primary">
+                        Get Started
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="bg-primary py-16 lg:py-20">
+          <div className="container mx-auto px-4">
+            <div className="text-center">
+              <h2 className="mb-4 text-3xl font-bold text-white sm:text-4xl">
+                Ready to Get Started?
+              </h2>
+              <p className="mb-8 text-lg text-white/80">
+                Join thousands of satisfied customers and transform your business today.
+              </p>
+              <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
+                <button className="rounded-lg bg-white px-8 py-3 font-semibold text-primary transition-colors hover:bg-gray-100">
+                  Contact Sales
+                </button>
+                <button className="rounded-lg border-2 border-white px-8 py-3 font-semibold text-white transition-colors hover:bg-white hover:text-primary">
+                  View Pricing
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     );
   };
@@ -123,363 +293,4 @@ export default ServicesPage;
 
 
 
-
-
-
-
-// const BlogDetailsPage = () => {
-//   return (
-//     <>
-//       <section className="pb-[120px] pt-[150px]">
-//         <div className="container">
-//           <div className="-mx-4 flex flex-wrap justify-center">
-//             <div className="w-full px-4 lg:w-8/12">
-//               <div>
-//                 <h2 className="mb-8 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight">
-//                   Curated list of Bainaryglobe's web services
-//                 </h2>
-//                 <div className="mb-10 flex flex-wrap items-center justify-between border-b border-body-color border-opacity-10 pb-4 dark:border-white dark:border-opacity-10">
-//                   <div className="flex flex-wrap items-center">
-//                     <div className="mb-5 mr-10 flex items-center">
-//                       <div className="mr-4">
-//                         <div className="relative h-10 w-10 overflow-hidden rounded-full">
-//                           <Image
-//                             src="/images/blog/author-02.png"
-//                             alt="author"
-//                             fill
-//                           />
-//                         </div>
-//                       </div>
-//                       <div className="w-full">
-//                         <span className="mb-1 text-base font-medium text-body-color">
-//                           By <span>Emmanuel Eyitayo</span>
-//                         </span>
-//                       </div>
-//                     </div>
-//                     <div className="mb-5 flex items-center">
-//                       <p className="mr-5 flex items-center text-base font-medium text-body-color">
-//                         <span className="mr-3">
-//                           <svg
-//                             width="15"
-//                             height="15"
-//                             viewBox="0 0 15 15"
-//                             className="fill-current"
-//                           >
-//                             <path d="M3.89531 8.67529H3.10666C2.96327 8.67529 2.86768 8.77089 2.86768 8.91428V9.67904C2.86768 9.82243 2.96327 9.91802 3.10666 9.91802H3.89531C4.03871 9.91802 4.1343 9.82243 4.1343 9.67904V8.91428C4.1343 8.77089 4.03871 8.67529 3.89531 8.67529Z" />
-//                             <path d="M6.429 8.67529H5.64035C5.49696 8.67529 5.40137 8.77089 5.40137 8.91428V9.67904C5.40137 9.82243 5.49696 9.91802 5.64035 9.91802H6.429C6.57239 9.91802 6.66799 9.82243 6.66799 9.67904V8.91428C6.66799 8.77089 6.5485 8.67529 6.429 8.67529Z" />
-//                             <path d="M8.93828 8.67529H8.14963C8.00624 8.67529 7.91064 8.77089 7.91064 8.91428V9.67904C7.91064 9.82243 8.00624 9.91802 8.14963 9.91802H8.93828C9.08167 9.91802 9.17727 9.82243 9.17727 9.67904V8.91428C9.17727 8.77089 9.08167 8.67529 8.93828 8.67529Z" />
-//                             <path d="M11.4715 8.67529H10.6828C10.5394 8.67529 10.4438 8.77089 10.4438 8.91428V9.67904C10.4438 9.82243 10.5394 9.91802 10.6828 9.91802H11.4715C11.6149 9.91802 11.7105 9.82243 11.7105 9.67904V8.91428C11.7105 8.77089 11.591 8.67529 11.4715 8.67529Z" />
-//                             <path d="M3.89531 11.1606H3.10666C2.96327 11.1606 2.86768 11.2562 2.86768 11.3996V12.1644C2.86768 12.3078 2.96327 12.4034 3.10666 12.4034H3.89531C4.03871 12.4034 4.1343 12.3078 4.1343 12.1644V11.3996C4.1343 11.2562 4.03871 11.1606 3.89531 11.1606Z" />
-//                             <path d="M6.429 11.1606H5.64035C5.49696 11.1606 5.40137 11.2562 5.40137 11.3996V12.1644C5.40137 12.3078 5.49696 12.4034 5.64035 12.4034H6.429C6.57239 12.4034 6.66799 12.3078 6.66799 12.1644V11.3996C6.66799 11.2562 6.5485 11.1606 6.429 11.1606Z" />
-//                             <path d="M8.93828 11.1606H8.14963C8.00624 11.1606 7.91064 11.2562 7.91064 11.3996V12.1644C7.91064 12.3078 8.00624 12.4034 8.14963 12.4034H8.93828C9.08167 12.4034 9.17727 12.3078 9.17727 12.1644V11.3996C9.17727 11.2562 9.08167 11.1606 8.93828 11.1606Z" />
-//                             <path d="M11.4715 11.1606H10.6828C10.5394 11.1606 10.4438 11.2562 10.4438 11.3996V12.1644C10.4438 12.3078 10.5394 12.4034 10.6828 12.4034H11.4715C11.6149 12.4034 11.7105 12.3078 11.7105 12.1644V11.3996C11.7105 11.2562 11.591 11.1606 11.4715 11.1606Z" />
-//                             <path d="M13.2637 3.3697H7.64754V2.58105C8.19721 2.43765 8.62738 1.91189 8.62738 1.31442C8.62738 0.597464 8.02992 0 7.28906 0C6.54821 0 5.95074 0.597464 5.95074 1.31442C5.95074 1.91189 6.35702 2.41376 6.93058 2.58105V3.3697H1.31442C0.597464 3.3697 0 3.96716 0 4.68412V13.2637C0 13.9807 0.597464 14.5781 1.31442 14.5781H13.2637C13.9807 14.5781 14.5781 13.9807 14.5781 13.2637V4.68412C14.5781 3.96716 13.9807 3.3697 13.2637 3.3697ZM6.6677 1.31442C6.6677 0.979841 6.93058 0.716957 7.28906 0.716957C7.62364 0.716957 7.91042 0.979841 7.91042 1.31442C7.91042 1.649 7.64754 1.91189 7.28906 1.91189C6.95448 1.91189 6.6677 1.6251 6.6677 1.31442ZM1.31442 4.08665H13.2637C13.5983 4.08665 13.8612 4.34954 13.8612 4.68412V6.45261H0.716957V4.68412C0.716957 4.34954 0.979841 4.08665 1.31442 4.08665ZM13.2637 13.8612H1.31442C0.979841 13.8612 0.716957 13.5983 0.716957 13.2637V7.16957H13.8612V13.2637C13.8612 13.5983 13.5983 13.8612 13.2637 13.8612Z" />
-//                           </svg>
-//                         </span>
-//                         12 Jan 2024
-//                       </p>
-//                       <p className="mr-5 flex items-center text-base font-medium text-body-color">
-//                         <span className="mr-3">
-//                           <svg
-//                             width="18"
-//                             height="13"
-//                             viewBox="0 0 18 13"
-//                             className="fill-current"
-//                           >
-//                             <path d="M15.6375 0H1.6875C0.759375 0 0 0.759375 0 1.6875V10.6875C0 11.3062 0.309375 11.8406 0.84375 12.15C1.09687 12.2906 1.40625 12.375 1.6875 12.375C1.96875 12.375 2.25 12.2906 2.53125 12.15L5.00625 10.7156C5.11875 10.6594 5.23125 10.6312 5.34375 10.6312H15.6094C16.5375 10.6312 17.2969 9.87187 17.2969 8.94375V1.6875C17.325 0.759375 16.5656 0 15.6375 0ZM16.3406 8.94375C16.3406 9.3375 16.0312 9.64687 15.6375 9.64687H5.37187C5.09062 9.64687 4.78125 9.73125 4.52812 9.87187L2.05313 11.3063C1.82812 11.4187 1.575 11.4187 1.35 11.3063C1.125 11.1938 1.0125 10.9688 1.0125 10.7156V1.6875C1.0125 1.29375 1.32188 0.984375 1.71563 0.984375H15.6656C16.0594 0.984375 16.3687 1.29375 16.3687 1.6875V8.94375H16.3406Z" />
-//                             <path d="M12.2342 3.375H4.69668C4.41543 3.375 4.19043 3.6 4.19043 3.88125C4.19043 4.1625 4.41543 4.3875 4.69668 4.3875H12.2623C12.5435 4.3875 12.7685 4.1625 12.7685 3.88125C12.7685 3.6 12.5154 3.375 12.2342 3.375Z" />
-//                             <path d="M11.0529 6.55322H4.69668C4.41543 6.55322 4.19043 6.77822 4.19043 7.05947C4.19043 7.34072 4.41543 7.56572 4.69668 7.56572H11.0811C11.3623 7.56572 11.5873 7.34072 11.5873 7.05947C11.5873 6.77822 11.3342 6.55322 11.0529 6.55322Z" />
-//                           </svg>
-//                         </span>
-//                         50
-//                       </p>
-//                       <p className="flex items-center text-base font-medium text-body-color">
-//                         <span className="mr-3">
-//                           <svg
-//                             width="20"
-//                             height="12"
-//                             viewBox="0 0 20 12"
-//                             className="fill-current"
-//                           >
-//                             <path d="M10.2559 3.8125C9.03711 3.8125 8.06836 4.8125 8.06836 6C8.06836 7.1875 9.06836 8.1875 10.2559 8.1875C11.4434 8.1875 12.4434 7.1875 12.4434 6C12.4434 4.8125 11.4746 3.8125 10.2559 3.8125ZM10.2559 7.09375C9.66211 7.09375 9.16211 6.59375 9.16211 6C9.16211 5.40625 9.66211 4.90625 10.2559 4.90625C10.8496 4.90625 11.3496 5.40625 11.3496 6C11.3496 6.59375 10.8496 7.09375 10.2559 7.09375Z" />
-//                             <path d="M19.7559 5.625C17.6934 2.375 14.1309 0.4375 10.2559 0.4375C6.38086 0.4375 2.81836 2.375 0.755859 5.625C0.630859 5.84375 0.630859 6.125 0.755859 6.34375C2.81836 9.59375 6.38086 11.5312 10.2559 11.5312C14.1309 11.5312 17.6934 9.59375 19.7559 6.34375C19.9121 6.125 19.9121 5.84375 19.7559 5.625ZM10.2559 10.4375C6.84961 10.4375 3.69336 8.78125 1.81836 5.96875C3.69336 3.1875 6.84961 1.53125 10.2559 1.53125C13.6621 1.53125 16.8184 3.1875 18.6934 5.96875C16.8184 8.78125 13.6621 10.4375 10.2559 10.4375Z" />
-//                           </svg>
-//                         </span>
-//                         35
-//                       </p>
-//                     </div>
-//                   </div>
-//                   <div className="mb-5">
-//                     <a
-//                       href="#0"
-//                       className="inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-semibold text-white"
-//                     >
-//                       Design
-//                     </a>
-//                   </div>
-//                 </div>
-//                 <div>
-//                   <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-//                    bAInaryglobe has a bunch of design tools for you
-//                   </p>
-//                   <div className="mb-10 w-full overflow-hidden rounded">
-//                     <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
-//                       <Image
-//                         src="/images/blog/blog-details-02.jpg"
-//                         alt="image"
-//                         fill
-//                         className="object-cover object-center"
-//                       />
-//                     </div>
-//                   </div>
-//                   <p className="mb-8 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-//                    bAIdev is a versatile IDE in the order of other state-of-the-art products
-//                     <strong className="text-primary dark:text-white">
-//                       bAIdev
-//                     </strong>
-//                    Vexeroo is a world class luxury product
-//                   </p>
-//                   <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-
-
-
-// And many more
-
-//                     <span className="text-primary underline dark:text-white">
-
-
-// We believe that software can make the world as good as it can possibly be
-
-//                     </span>
-
-
-//                    And that is what our duty is to you, here at bAInaryglobe
-
-
-//                   </p>
-//                   <h3 className="font-xl mb-10 font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight">
-
-
-// Testings
-
-//                   </h3>
-//                   <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                  
-
-//                    we run extensive tests on software to ensure it works as good as it can.
-
-//                   </p>
-//                   <ul className="mb-10 list-inside list-disc text-body-color">
-//                     <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-
-
-// STATE OF THE ART.
-
-//                     </li>
-//                     <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-
-// MODERN
-
-//                     </li>
-//                     <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-
-
-// AFFORDABLE
-
-//                     </li>
-//                     <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
-
-
-
-// EASE OF USE
-
-
-//                     </li>
-//                   </ul>
-//                   <div className="relative z-10 mb-10 overflow-hidden rounded-md bg-primary bg-opacity-10 p-8 md:p-9 lg:p-8 xl:p-9">
-//                     <p className="text-center text-base font-medium italic text-body-color">
-                     
-                     
-//                      ACCESSIBILITY
-
-
-
-//                     </p>
-//                     <span className="absolute left-0 top-0 z-[-1]">
-//                       <svg
-//                         width="132"
-//                         height="109"
-//                         viewBox="0 0 132 109"
-//                         fill="none"
-//                         xmlns="http://www.w3.org/2000/svg"
-//                       >
-//                         <path
-//                           opacity="0.5"
-//                           d="M33.0354 90.11C19.9851 102.723 -3.75916 101.834 -14 99.8125V-15H132C131.456 -12.4396 127.759 -2.95278 117.318 14.5117C104.268 36.3422 78.7114 31.8952 63.2141 41.1934C47.7169 50.4916 49.3482 74.3435 33.0354 90.11Z"
-//                           fill="url(#paint0_linear_111:606)"
-//                         />
-//                         <path
-//                           opacity="0.5"
-//                           d="M33.3654 85.0768C24.1476 98.7862 1.19876 106.079 -9.12343 108.011L-38.876 22.9988L100.816 -25.8905C100.959 -23.8126 99.8798 -15.5499 94.4164 0.87754C87.5871 21.4119 61.9822 26.677 49.5641 38.7512C37.146 50.8253 44.8877 67.9401 33.3654 85.0768Z"
-//                           fill="url(#paint1_linear_111:606)"
-//                         />
-//                         <defs>
-//                           <linearGradient
-//                             id="paint0_linear_111:606"
-//                             x1="94.7523"
-//                             y1="82.0246"
-//                             x2="8.40951"
-//                             y2="52.0609"
-//                             gradientUnits="userSpaceOnUse"
-//                           >
-//                             <stop stopColor="white" stopOpacity="0.06" />
-//                             <stop
-//                               offset="1"
-//                               stopColor="white"
-//                               stopOpacity="0"
-//                             />
-//                           </linearGradient>
-//                           <linearGradient
-//                             id="paint1_linear_111:606"
-//                             x1="90.3206"
-//                             y1="58.4236"
-//                             x2="1.16149"
-//                             y2="50.8365"
-//                             gradientUnits="userSpaceOnUse"
-//                           >
-//                             <stop stopColor="white" stopOpacity="0.06" />
-//                             <stop
-//                               offset="1"
-//                               stopColor="white"
-//                               stopOpacity="0"
-//                             />
-//                           </linearGradient>
-//                         </defs>
-//                       </svg>
-//                     </span>
-//                     <span className="absolute bottom-0 right-0 z-[-1]">
-//                       <svg
-//                         width="53"
-//                         height="30"
-//                         viewBox="0 0 53 30"
-//                         fill="none"
-//                         xmlns="http://www.w3.org/2000/svg"
-//                       >
-//                         <circle
-//                           opacity="0.8"
-//                           cx="37.5"
-//                           cy="37.5"
-//                           r="37.5"
-//                           fill="#4A6CF7"
-//                         />
-//                         <mask
-//                           id="mask0_111:596"
-//                           style={{ maskType: "alpha" }}
-//                           maskUnits="userSpaceOnUse"
-//                           x="0"
-//                           y="0"
-//                           width="75"
-//                           height="75"
-//                         >
-//                           <circle
-//                             opacity="0.8"
-//                             cx="37.5"
-//                             cy="37.5"
-//                             r="37.5"
-//                             fill="#4A6CF7"
-//                           />
-//                         </mask>
-//                         <g mask="url(#mask0_111:596)">
-//                           <circle
-//                             opacity="0.8"
-//                             cx="37.5"
-//                             cy="37.5"
-//                             r="37.5"
-//                             fill="url(#paint0_radial_111:596)"
-//                           />
-//                           <g opacity="0.8" filter="url(#filter0_f_111:596)">
-//                             <circle
-//                               cx="40.8089"
-//                               cy="19.853"
-//                               r="15.4412"
-//                               fill="white"
-//                             />
-//                           </g>
-//                         </g>
-//                         <defs>
-//                           <filter
-//                             id="filter0_f_111:596"
-//                             x="4.36768"
-//                             y="-16.5881"
-//                             width="72.8823"
-//                             height="72.8823"
-//                             filterUnits="userSpaceOnUse"
-//                             colorInterpolationFilters="sRGB"
-//                           >
-//                             <feFlood
-//                               floodOpacity="0"
-//                               result="BackgroundImageFix"
-//                             />
-//                             <feBlend
-//                               mode="normal"
-//                               in="SourceGraphic"
-//                               in2="BackgroundImageFix"
-//                               result="shape"
-//                             />
-//                             <feGaussianBlur
-//                               stdDeviation="10.5"
-//                               result="effect1_foregroundBlur_111:596"
-//                             />
-//                           </filter>
-//                           <radialGradient
-//                             id="paint0_radial_111:596"
-//                             cx="0"
-//                             cy="0"
-//                             r="1"
-//                             gradientUnits="userSpaceOnUse"
-//                             gradientTransform="translate(37.5 37.5) rotate(90) scale(40.2574)"
-//                           >
-//                             <stop stopOpacity="0.47" />
-//                             <stop offset="1" stopOpacity="0" />
-//                           </radialGradient>
-//                         </defs>
-//                       </svg>
-//                     </span>
-//                   </div>
-//                   <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    
-                    
-//                  TESTINGS
-
-//                   </p>
-//                   <div className="items-center justify-between sm:flex">
-//                     <div className="mb-5">
-//                       <h4 className="mb-3 text-sm font-medium text-body-color">
-//                         Popular Tags :
-//                       </h4>
-//                       <div className="flex items-center">
-//                         <TagButton text="Design" />
-//                         <TagButton text="Development" />
-//                         <TagButton text="Info" />
-//                       </div>
-//                     </div>
-//                     <div className="mb-5">
-//                       <h5 className="mb-3 text-sm font-medium text-body-color sm:text-right">
-//                         Share this post :
-//                       </h5>
-//                       <div className="flex items-center sm:justify-end">
-//                         <SharePost />
-//                       </div>
-//                     </div>
-//                   </div>
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </section>
-//     </>
-//   );
-// };
-
-// export default BlogDetailsPage;
+export default ServicesPage;
