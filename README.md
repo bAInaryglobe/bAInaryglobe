@@ -1,20 +1,14 @@
-<p align="center">
-  <img src="public/images/logo/logo.png" alt="Project Logo" width="120" />
-</p>
+![Project Logo](public/images/logo/logo.png)
 
-<h1 align="center">Startup Next.js SaaS/Business Template</h1>
+# Startup Next.js SaaS/Business Template
 
-<p align="center">
-  <b>Modern, production-ready Next.js template for SaaS, startups, and business websites.</b><br/>
-  <a href="https://startup.nextjstemplates.com/">Live Demo</a> · <a href="#getting-started">Get Started</a>
-</p>
+**Modern, production-ready Next.js template for SaaS, startups, and business websites.**  
+[Live Demo](https://startup.nextjstemplates.com/) · [Get Started](#getting-started)
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Next.js-15-blue?logo=nextdotjs" />
-  <img src="https://img.shields.io/badge/TailwindCSS-3.4-blue?logo=tailwindcss" />
-  <img src="https://img.shields.io/badge/TypeScript-5.6-blue?logo=typescript" />
-  <img src="https://img.shields.io/badge/License-MIT-green" />
-</p>
+![Next.js 15](https://img.shields.io/badge/Next.js-15-blue?logo=nextdotjs)
+![TailwindCSS 3.4](https://img.shields.io/badge/TailwindCSS-3.4-blue?logo=tailwindcss)
+![TypeScript 5.6](https://img.shields.io/badge/TypeScript-5.6-blue?logo=typescript)
+![License: MIT](https://img.shields.io/badge/License-MIT-green)
 
 ---
 
@@ -46,11 +40,9 @@
 
 ## Screenshots
 
-<p align="center">
-  <img src="public/images/hero/shape-01.svg" alt="Hero Screenshot" width="600" />
-  <br/>
-  <i>Modern, clean landing page design</i>
-</p>
+![Hero Screenshot](public/images/hero/shape-01.svg)
+
+_Modern, clean landing page design_
 
 ## Tech Stack
 
@@ -105,11 +97,11 @@ prettier --write .
 
 - **Vercel:** Click the button below to deploy instantly.
 
-  [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fyour-org%2Fstartup-nextjs-template)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fyour-org%2Fstartup-nextjs-template)
 
 - **Netlify:**
 
-  [![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/your-org/startup-nextjs-template)
+[![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/your-org/startup-nextjs-template)
 
 ## Folder Structure
 
@@ -157,6 +149,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-<p align="center">
-  <i>Made with ❤️ using Next.js & Tailwind CSS</i>
-</p>
+_Made with ❤️ using Next.js & Tailwind CSS_
